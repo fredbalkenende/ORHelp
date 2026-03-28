@@ -11,11 +11,11 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://your-real-domain-here.com',
-  baseUrl: '/',
+  url: 'https://fredbalkenende.github.io',
+  baseUrl: '/ORHelp/',
 
-  organizationName: 'your-github-name',
-  projectName: 'orhelp',
+  organizationName: 'fredbalkenende',
+  projectName: 'ORHelp',
 
   onBrokenLinks: 'warn',
 
@@ -73,7 +73,7 @@ const config: Config = {
           items: [
             {
               label: 'Introduction',
-              to: '/docs/intro',
+              to: '/intro',
             },
           ],
         },
