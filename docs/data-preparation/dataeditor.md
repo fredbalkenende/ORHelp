@@ -34,7 +34,7 @@ Derived Variables have a blue icon.
 
 You can change properties such as name, text, and other settings.
 
-**Note:** If you define [Default Table Settings](variabledefaulttablesettings.md) for frequently used variables, you can save time when creating tables.
+**Note:** If you define [Default Table Settings](variable-default-table-settings.md) for frequently used variables, you can save time when creating tables.
 
 Read more about editing the different variable types in the sections below.
 
@@ -111,7 +111,7 @@ You can also divide numerical data into intervals or categories. Read more in [R
 
 Text variables usually contain answers to open-ended questions. You can use text variables in lists, for example to show responses from people who were unhappy with a specific service.
 
-Read more in [Text Lists](text-lists.md#Text_Lists).
+Read more in [Verbatim Lists](../data-analysis/verbatim-lists.md).
 
 You can also divide text variables into categories to make them easier to use. Read more in [Recoding Variables](recoding-variables.md).
 

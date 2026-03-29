@@ -8,15 +8,15 @@ Use **Active Sheet** to work with OfficeReports content in the selected workshee
 
 ## Copy Sheet
 
-Use **Copy Sheet** to copy a worksheet and keep all OfficeReports settings for tables, charts, and text lists in the worksheet.
+Use **Copy Sheet** to copy a worksheet and keep all OfficeReports settings for tables, charts, and verbatim lists in the worksheet.
 
 This is useful when you want to duplicate a worksheet that contains many tables and use different filters in the copy.
 
 ## Filter Sheet
 
-Use **Filter Sheet** when you want to apply the same filter to all tables, charts, and text lists in one worksheet.
+Use **Filter Sheet** when you want to apply the same filter to all tables, charts, and verbatim lists in one worksheet.
 
-> **Note:** The new filter setting overrides any individual filter already defined for the tables, charts, or text lists in the worksheet.
+> **Note:** The new filter setting overrides any individual filter already defined for the tables, charts, or verbatim lists in the worksheet.
 
 ## Refresh Sheet
 

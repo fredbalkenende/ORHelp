@@ -42,7 +42,7 @@ To define variable-level default settings:
 
 1. Open the [Data Editor](../data-preparation/dataeditor.md).
 2. Select the variable.
-3. Set the [Default Table Settings](variable-default-table-settings.md) for that variable.
+3. Set the [Default Table Settings](../data-preparation/variable-default-table-settings.md) for that variable.
 
 You can use this to define settings such as sorting and significance testing.
 

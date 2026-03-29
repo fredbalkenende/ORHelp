@@ -17,7 +17,7 @@ When you select more than one category, OfficeReports treats the selection as an
 
 For example, if you select **Department = Sales** and **Department = Marketing**, OfficeReports includes responses from employees in **Sales** or **Marketing** in all existing and new tables, charts, and lists.
 
-If you need a filter based on two or more variables, create a [derived variable](recoding-variables.md) with one category that defines the required combination.
+If you need a filter based on two or more variables, create a [derived variable](../data-preparation/recoding-variables.md) with one category that defines the required combination.
 
 ## Segment Filters
 

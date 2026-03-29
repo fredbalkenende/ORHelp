@@ -157,5 +157,4 @@ Specify the number of decimals you want to display.
 
 ## See also
 
-- [Visualizing Significance](reporting/visualizing-significance.md)
 - [Populating Tables, Charts and Shapes](reporting/populate-table.md)

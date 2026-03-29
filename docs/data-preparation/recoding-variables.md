@@ -272,7 +272,7 @@ Use **Advanced View** to create a banner variable that can contain any data you 
 
 ![Variable in data Editor](/Resources/Images/AdvancedSettingsCat2_1000x595.png)
 
-See how to use this functionality in the [example in the Filtering chapter](filtering.md).
+See how to use this functionality in the [example in the Filtering chapter](../reporting/filtering.md).
 
 ### Example
 

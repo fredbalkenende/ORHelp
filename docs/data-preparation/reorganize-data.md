@@ -4,7 +4,7 @@ Before you populate tables and charts in PowerPoint, you often need to reorganiz
 
 Lookup Tables and Lookup Ranges are search-based methods. They are well suited for report automation because OfficeReports can still find the correct data even if the workbook layout changes between reporting periods.
 
-All three methods are similar to linking to ranges in Excel. In Excel, a link only returns the values from a fixed range. In OfficeReports, the linked range is flexible and also keeps the formatting from the source range, including font color and fill color. OfficeReports can use these colors to display icons, such as arrows, in PowerPoint presentations. Read more about this in [Color-Driven Icons](color-driven-icons.md).
+All three methods are similar to linking to ranges in Excel. In Excel, a link only returns the values from a fixed range. In OfficeReports, the linked range is flexible and also keeps the formatting from the source range, including font color and fill color. OfficeReports can use these colors to display icons, such as arrows, in PowerPoint presentations. Read more about this in [Color-Driven Icons](../reporting/color-driven-icons.md).
 
 ## Lookup Tables
 

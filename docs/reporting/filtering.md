@@ -62,7 +62,7 @@ This shows the name of the active department in the table.
 1. Enter `[Year.2019]` as the formula for the **Last Year** category.
 2. Ignore the **Report Filter** for this category.
 
-If possible, use the [Formula Editor](formula-editor.md) to create formulas.
+If possible, use the [Formula Editor](../data-preparation/formula-editor.md) to create formulas.
 
 ![Filter by year example](/Resources/Images/LastYearFilter_1084x378.png)
 

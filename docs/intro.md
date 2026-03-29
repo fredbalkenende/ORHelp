@@ -66,7 +66,7 @@ The following topics are the same in both the OfficeReports App and Excel.
 
 The Data Editor gives you an overview of your data in both Variable View and Data View. You can also recode your data here if needed.
 
-Read more about the Data Editor [here](data-analysis/dataeditor.md).
+Read more about the Data Editor [here](data-preparation/dataeditor.md).
 
 ## Explore Data
 

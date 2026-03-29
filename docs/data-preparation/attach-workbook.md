@@ -9,7 +9,7 @@ Attach a workbook to your presentation so you can use workbook data in PowerPoin
 3. Click **Attach Workbook**.
 4. Select the Excel workbook that contains the data you want to visualize.
 
-After you attach the workbook, you can configure the [settings](presentosettings.md) and populate [tables](populatetable.md), [charts](populatechart.md), and [shapes](populateshape.md) with data from the workbook. You can also use the other features available on the ribbon tab.
+After you attach the workbook, you can configure the [settings](../reporting/report-settings.md) and populate [tables](../reporting/populate-table.md), [charts](../reporting/populate-chart.md), and [shapes](../reporting/populate-shape.md) with data from the workbook. You can also use the other features available on the ribbon tab.
 
 > **Note:** OfficeReports copies the selected workbook to the same folder as the presentation and gives it the same name as the presentation. If another OfficeReports user needs to work on the presentation and does not have access to this folder, send both the presentation and the workbook.
 

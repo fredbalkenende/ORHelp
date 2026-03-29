@@ -35,7 +35,7 @@ You can change how the populated chart looks in the **Populated Pane**.
 
 ![Chart Settings](/Resources/Images/ChartSettingsLink.png)
 
-Most chart settings work in the same way as the settings for [Tables](populatetable.md).
+Most chart settings work in the same way as the settings for [Tables](populate-table.md).
 
 ### Show Texts in a Table
 
@@ -105,7 +105,7 @@ For example, the macro `ORTop2Bracket` adds brackets to the chart.
 
 ![Chart with brackets - added by macro](/Resources/Images/OfficeReportsLink9. 0/Charts Link Excel Range to_50.png)
 
-Read more about [VBA Macros](appendix-vba-macros.md).
+Read more about [VBA Macros](../reference-troubleshooting/vba-macros.md).
 
 ## Handle Overlapping Data Labels
 

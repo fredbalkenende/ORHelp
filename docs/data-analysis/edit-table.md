@@ -27,7 +27,7 @@ If a table contains a category that is filtered out, the category name is still 
 
 ### Ignoring Filters
 
-Use **Ignoring Filters** to exclude selected filters when OfficeReports calculates the table. This is useful for report automation, for example when [mass-generating reports](filtering.md).
+Use **Ignoring Filters** to exclude selected filters when OfficeReports calculates the table. This is useful for report automation, for example when [batch generating reports](../reporting/filtering.md).
 
 ### Add a Filter Declaration
 

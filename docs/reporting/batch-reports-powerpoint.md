@@ -4,8 +4,6 @@ Use **Batch Reports** to generate multiple PowerPoint presentations in one proce
 
 OfficeReports **Intelligo Premium** and **Sheet2Slide Premium** support Batch reporting. You can generate reports by using **Segment Filters** or by selecting multiple workbooks.
 
-![Batch Reports in the OfficeReports Ribbon Tab in PowerPoint](/Resources/Images/BatchReportsMenu.png)
-
 ## Generate PowerPoint Presentations by Using Segment Filters
 
 Use **Segment Filters** when you want OfficeReports to generate one report for each filter combination.
@@ -19,19 +17,13 @@ Before you use **Batch Reports**, define the required **Segment Filters**. For m
 
 OfficeReports recalculates the tables for each filter combination and generates a new presentation for each report.
 
-![Batch Reports Form in PowerPoint](/Resources/Images/BatchReportsWindow_536x603.png)
-
 For example, if you select all departments in **Segment1** and all teams in **Segment2**, OfficeReports creates one report for each department and team combination.
-
-![Message 13 reports to generate](/Resources/Images/BatchReportsRun_539x218.png)
 
 ## Generate PowerPoint Presentations by Selecting Workbooks
 
 Use this method when you have multiple Excel workbooks with the same workbook structure and want to generate one PowerPoint presentation for each workbook.
 
 A PowerPoint report can be linked to an Excel workbook and used as a template. OfficeReports updates the tables, charts, and shapes in the presentation by using the data from each selected workbook.
-
-![Batch Reports Form showing workbooks](/Resources/Images/OfficeReportsLink9. 0/Batch Reports_1.png)
 
 For example, you may have many Excel workbooks in one folder, where each workbook contains data for one outlet. If all workbooks use the same worksheet and range structure, OfficeReports can use them to generate separate PowerPoint presentations from the same template.
 

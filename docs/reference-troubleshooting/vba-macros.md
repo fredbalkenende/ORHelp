@@ -46,7 +46,7 @@ End Function
 
 ### To use the macro:
 
-Create a Table Layout in the [Table Layout](../data-preparation/table-layout/table-layout.md) settings.
+Create a Table Layout in the [Table Layout](../data-analysis/table-layout/table-layout.md) settings.
 Enter the macro name in the Excel Macro field.
 
 ![VBA Settings for Crosstab](/Resources/Images/OfficeReports Analytics/Appendix 3 Integrating Macros_479x455.png)
