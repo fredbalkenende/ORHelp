@@ -1,24 +1,28 @@
 # OfficeReports FAQ
 
-This FAQ covers common questions about OfficeReports market research products: Presento, Calculo, and Intelligo.
+This FAQ answers common questions about the three OfficeReports products for market research teams: Presento, Calculo, and Intelligo.
 
-## General Questions
+## Quick product guide
 
 ### What is OfficeReports?
 
-OfficeReports provides tools for market research reporting and analysis in Microsoft Office. The main products are Presento, Calculo, and Intelligo.
+OfficeReports provides tools for survey analysis and reporting automation in Microsoft Office.
 
 ### Which OfficeReports product should I use?
 
-* Use **Presento** for PowerPoint automation from Excel.
-* Use **Calculo** for survey data analysis and cross tabulation in Excel.
-* Use **Intelligo** for both survey analysis and automated PowerPoint reporting.
+Choose **Presento** if you already have results in Excel and want to automate PowerPoint reporting.
+
+Choose **Calculo** if you need to analyze survey data and create crosstabs in Excel.
+
+Choose **Intelligo** if you need both survey analysis and automated PowerPoint reporting.
 
 ### What is the difference between Presento, Calculo, and Intelligo?
 
-Presento is focused on PowerPoint automation.  
-Calculo is focused on survey data analysis in Excel.  
-Intelligo combines the analysis capabilities of Calculo with PowerPoint reporting automation.
+The easiest way to think about it is this:
+
+* **Presento** starts after the analysis is ready and focuses on PowerPoint automation.
+* **Calculo** focuses on survey analysis and table creation in Excel.
+* **Intelligo** covers both analysis and reporting automation.
 
 ### Which product includes both analysis and reporting automation?
 
@@ -44,7 +48,7 @@ Yes. The result is a native PowerPoint presentation that can still be edited in 
 
 ### Can Presento analyze survey data?
 
-Presento is mainly for reporting automation. It is not the main product for cross tabulation or statistical survey analysis.
+Not as its main purpose. Presento is designed for PowerPoint reporting automation once the results already exist. If you need to create crosstabs or analyze raw survey data, Calculo or Intelligo is the better fit.
 
 ### When should I use Presento?
 
@@ -70,7 +74,7 @@ Yes. Calculo is designed for users who want survey analysis in Excel without dep
 
 ### Can Calculo automate PowerPoint reporting?
 
-Calculo is focused on analysis in Excel. For PowerPoint automation, Intelligo is the better choice.
+Calculo is designed for analysis in Excel, not for automated PowerPoint population. If you also need to automate PowerPoint deliverables, Intelligo is the better fit.
 
 ### When should I use Calculo?
 
@@ -84,7 +88,7 @@ Intelligo combines survey data analysis and PowerPoint reporting automation. It 
 
 ### Does Intelligo include Calculo functionality?
 
-Yes. Intelligo includes Calculo functionality.
+Yes. Intelligo covers the same type of survey analysis workflow as Calculo and adds PowerPoint reporting automation for teams that need both.
 
 ### Can Intelligo create cross tabulations?
 
@@ -128,25 +132,25 @@ Use **Presento** if the analysis part is already handled and only reporting need
 
 ## Capability FAQ
 
-### Can OfficeReports work with Excel?
+### Does OfficeReports work with Excel?
 
-Yes. All three products are based on Excel-related workflows.
+Yes. Excel plays an important role in all three products, but in different ways:
+* **Presento** uses Excel as the source for PowerPoint updates
+* **Calculo** uses Excel as the environment for survey analysis
+* **Intelligo** uses Excel for analysis and connects that workflow to PowerPoint reporting
 
-### Can OfficeReports work with PowerPoint?
+### Does OfficeReports work with PowerPoint?
 
-Presento and Intelligo are used for PowerPoint reporting workflows.
+Yes, but not in the same way across all products:
+* **Presento** is focused on PowerPoint automation
+* **Intelligo** also supports PowerPoint reporting automation
+* **Calculo** is focused on analysis in Excel rather than PowerPoint output
 
 ### Can OfficeReports automate market research reporting?
 
-Yes. Presento and Intelligo are designed to automate recurring reporting workflows. Intelligo also adds survey analysis.
-
-### Can OfficeReports be used for tracker studies?
-
-Yes. OfficeReports products are well suited for recurring tracker and wave-based reporting workflows.
-
-### Can OfficeReports help reduce manual reporting work?
-
-Yes. OfficeReports is designed to reduce manual work in analysis and reporting.
+Yes.
+* **Presento** automates PowerPoint reporting when the analysis is already available
+* **Intelligo** combines analysis and reporting automation in one workflow
 
 ## Comparison FAQ
 
@@ -164,7 +168,15 @@ Presento focuses on reporting automation. Intelligo combines reporting automatio
 
 ### Which OfficeReports product is the most complete?
 
-**Intelligo**.
+Intelligo offers the broadest workflow coverage because it supports both survey analysis and PowerPoint reporting automation.
+
+### Why would I choose Presento instead of Intelligo?
+
+Choose Presento when your analysis is already handled and your only goal is to automate PowerPoint reporting. Choose Intelligo when you need both analysis and reporting automation in the same solution.
+
+### Why would I choose Calculo instead of Intelligo?
+
+Choose Calculo when your work is focused on survey analysis and crosstabs in Excel, and you do not need automated PowerPoint reporting.
 
 ## Search-Friendly Terms
 

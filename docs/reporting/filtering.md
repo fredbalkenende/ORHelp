@@ -1,30 +1,127 @@
 ﻿# Filtering
 
-Use filtering to automate survey reports. In OfficeReports, you can define filters at the report level, category level, and table level. You can also ignore filters at lower levels when needed.
+Use **Filtering** to define which respondents are included in a crosstab or table.
 
-## Define Report-Level Filters
+In OfficeReports, the default report output is filtered by the active:
+
+- **Report Filter**
+- **AND Segment1**
+- **AND Segment2**
+- **AND Segment3**
+
+for every segment filter that is defined.
+
+You can then further control the result in two ways:
+
+- add filtering for a whole table
+- define filtering for one specific category or column inside a table
+
+In addition, table-level and category-level settings can ignore one or more active higher-level filters.
+
+## Report Filters and Segment Filters
+
+Use **Report Filters** to define the default filtering for the report.
 
 1. Click **Report Filters** on the OfficeReports Ribbon Tab.
 2. Define the [Report Filter, and the filters Segment1, Segment2 and Segment3](report-filter.md).
 
-You can ignore these filters individually at both the category level and the table level.
+These filters define the default report output.
 
-## Set Filtering Options for a Category
+For example, if you set:
+- **Report Filter** = `2024`
+- **Segment1** = `Finance`
+- **Segment2** = `BKP`
 
-1. Open the Variable window.
-2. Select a category in a derived variable.
-3. Set the required filtering options.
+then the report shows respondents that match:
 
-![Table filtering option for a variable](/Resources/Images/CatIgnoreFilters.png)
+`2024 AND Finance AND BKP`
 
-The expression `[Department.Finance]` also works as a filter. For example, you can define whether to ignore the **Segment1** filter.
+If a segment filter is not defined, it is not part of the filter logic.
 
-## Set Filtering Options for a Table
+### Segment Filters and batch generation
+
+Segment Filters are ordinary report-level filters, but they also have an extra use in batch generation.
+
+When you use [Batch Reports](batch-reports.md) or [Batch Reports for PowerPoint](batch-reports-powerpoint.md), OfficeReports can generate one report for each selected combination of **Segment1**, **Segment2**, and **Segment3** categories.
+
+For example, if you select all departments in **Segment1** and all teams in **Segment2**, OfficeReports can generate one report for each department/team combination.
+
+## Table-level filtering
+
+Use table-level filtering when you want to apply extra filtering to the whole crosstab or table.
 
 1. Open the table settings for the crosstab.
 2. Set the required filter options for the table.
 
-![Filtering definition fro a crosstab](/Resources/Images/TableFilter.png)
+![Filtering definition for a crosstab](/Resources/Images/TableFilter.png)
+
+Table-level filtering affects the whole table.
+
+Use table-level filtering when:
+- one table should be narrower than the default report output
+- one table should use extra filtering logic
+- one table should behave differently from the other tables in the report
+
+## Category-level filtering
+
+Use category-level filtering when you want filtering to apply only to one category or column in the table.
+
+This does **not** filter the whole table. It only affects the specific category.
+
+1. Open the Variable window.
+2. Select a category in a derived variable.
+3. Set the required category filter options.
+
+![Table filtering option for a variable](/Resources/Images/CatIgnoreFilters.png)
+
+A category can:
+- contain the observations in the active report and hierarchy filters
+- contain observations defined by a formula
+- ignore one or more active filters
+
+For example, the expression `[Department.Finance]` can be used as a formula for one category.
+
+Use category-level filtering when you want special columns such as:
+- `Company`
+- `Department`
+- `Last Year`
+- a specific comparison group
+
+to follow different filtering logic from the rest of the table.
+
+## Ignore Filters
+
+In many reports, the active **Report Filter** and **Segment Filters** define the default output.
+
+OfficeReports can ignore one or more of these filters at lower levels:
+
+- a **table** can ignore one or more active filters for the whole crosstab
+- a **category** can ignore one or more active filters for that category only
+
+This is important when:
+- the report itself should show one department or team
+- but one table should show broader results
+- or one category such as `Company`, `Department`, or `Last Year` should ignore part of the default filtering
+
+You can also define this automatically through [Default Table Settings](../data-preparation/variable-default-table-settings.md), so that the ignore-filter settings are applied whenever a specific variable is used in a table.
+
+## When should I use which filtering level?
+
+### Use Report Filter and Segment Filters when:
+- the whole report should be limited to the current wave, period, market, department, team, or segment
+- you want the visible report to follow one default filter combination
+- you want to generate batch reports for multiple segment combinations
+
+### Use table-level filtering when:
+- one whole table should behave differently from the rest of the report
+- one table should use extra filtering
+- one table should ignore one or more active higher-level filters
+
+### Use category-level filtering when:
+- one category or column inside the table should behave differently
+- one category should use a filter formula
+- one category should ignore one or more active filters
+- you want a column such as `Company`, `Department`, or `Last Year`
 
 ## Example: Create a Team Table with Comparison Columns
 
@@ -45,11 +142,13 @@ Because you want to test significance against the active team, you must use the 
 1. Copy the **Teams** variable.
 2. Add the categories `Company`, `Department`, and `Last Year`.
 
-To get the numbers for **Company**, you must ignore the filters for department and team. To get the results for the complete department, you must ignore the team filter.
+To get the numbers for **Company**, you must ignore the filters for department and team.
+
+To get the results for the complete department, you must ignore the team filter.
 
 ![Filter by Company example](/Resources/Images/CompanyFilter_1076x390.png)
 
-![Filter bu department example](/Resources/Images/DepartmentFilter_1081x419.png)
+![Filter by department example](/Resources/Images/DepartmentFilter_1081x419.png)
 
 ### Show the Active Department Name
 
@@ -106,6 +205,46 @@ The same table then shows the following content:
 
 ![Another Crosstab created using the example filter](/Resources/Images/MeanTable2_967x277.png)
 
-## Additional Explanation
+## Common filtering problems
 
-This example shows one way to use the filtering system. In this case, the filtering system is essential for generating all team reports in one run by using [Batch Reports](batch-reports.md).
+### A table shows fewer respondents than expected
+
+Check whether:
+- the **Report Filter** excludes part of the data
+- one or more **Segment Filters** are active
+- the table has its own filter settings
+- one or more categories use formulas or ignore-filter settings
+
+### A Company or Department column is empty
+
+Check whether that category should ignore one or more active Segment Filters.
+
+### A Last Year column is empty
+
+Check whether:
+- the category formula is correct
+- the category ignores the active Report Filter if needed
+
+### The table only shows the active team, not the comparison columns
+
+Check whether the table or the banner variable should ignore the active team filter.
+
+### Batch-generated reports are too narrow
+
+Check whether the selected Segment Filters are correct and whether tables or categories unintentionally inherit filters that should be ignored.
+
+## Filtering compared with other table settings
+
+Filtering defines which respondents are included.
+
+Filtering does not define:
+- the default settings for tables in the report
+- the statistical methods used in significance testing
+- the settings automatically applied when a specific variable is used in a table
+- how the table is formatted or displayed
+
+See also:
+- [Table Settings](../data-analysis/table-settings.md)
+- [Statistics](../data-analysis/statistics.md)
+- [Default Table Settings](../data-preparation/variable-default-table-settings.md)
+- [Table Layout](../data-analysis/table-layout/table-layout.md)

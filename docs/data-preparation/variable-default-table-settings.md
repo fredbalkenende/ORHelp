@@ -1,6 +1,6 @@
-﻿# Default Table Settings
+﻿# Default Table Settings for a Variable
 
-Use **Default Table Settings** to define the default settings for variables that you often use in tables, such as banner variables. When you use these variables while creating tables, OfficeReports automatically applies the settings.
+Use **Default Table Settings for a Variable** to define the default settings for variables that you often use in tables, such as banner variables. When you use these variables while creating tables, OfficeReports automatically applies the settings.
 
 This helps you create tables the way you want without repeating the same table settings each time.
 
@@ -8,7 +8,7 @@ This helps you create tables the way you want without repeating the same table s
 
 ## Set Default Table Settings
 
-1. Open the **Variables Window**.
+1. Open the **Data Editor**.
 2. Select the variable you want to configure.
 3. Set the required defaults on the available tabs.
 

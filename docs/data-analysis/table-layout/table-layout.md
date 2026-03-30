@@ -3,7 +3,7 @@ title: Table Layout
 sidebar_position: 1
 ---
 
-# Table Layout
+# Table Layout Definitions
 
 Use **Table Layout** to define the default table layouts for OfficeReports Crosstabs and Tables.
 
@@ -36,6 +36,16 @@ To set the layout for a specific report:
 2. Click **Table Layout**.
 
 ![Table Layout Settings in the OfficeReports Ribbon Tab](/Resources/Images/TableLayoutInRibbon.png)
+
+## Table Layout
+
+You can override the default report table layout for any crosstab or table.
+
+To set the layout for a specific table:
+
+1. [Edit](../edit-table.md)) the table
+2. Click the **Layout** tab
+3. Choose the desired table layout from the dropdown box.
 
 ## Related Topics
 

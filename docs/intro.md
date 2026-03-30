@@ -74,7 +74,7 @@ Before you create specific crosstabs, you may want to get an overview of your da
 
 ## Create Tables
 
-Read more about creating tables [here](data-analysis/table-layout/table-layout.md).
+Read more about creating tables [here](data-analysis/create-table.md).
 
 ## Bulk Create Tables
 

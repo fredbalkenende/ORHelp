@@ -5,13 +5,38 @@ sidebar_position: 2
 
 # Import Data
 
-Use **Import Data** to add survey data to your OfficeReports file. OfficeReports saves the imported data in an OfficeReports database that has the same name as the file you are working with and the extension `.ordbx`.
+Use **Import Data** to add survey data to your OfficeReports file.
+
+OfficeReports stores the imported data in an OfficeReports database that has the same name as the file you are working with and the extension `.ordbx`.
 
 ![Import Data icon](/Resources/Images/OfficeReports Analytics/Add Data_35x33.png)
 
 ![Import data Popup Form](/Resources/Images/AddData_396x509.png)
 
-As soon as you click the OfficeReports menu in Excel, the **Import Data** window opens. You can also open **Add Data** at any time to import data from a different source.
+As soon as you click the OfficeReports menu in Excel, the **Import Data** window opens. You can also open **Add Data** at any time to import data from another source.
+
+## When should I use Import Data?
+
+Use **Import Data** when you want to create an OfficeReports file or when you add data to an OfficeReports template for the first time.
+
+This is the normal starting point when you begin working on a study, tracker, or report.
+
+You can also use **Import Data** later when the new dataset contains only respondents that are not yet present in the OfficeReports file.
+
+## When should I use Merge Data instead?
+
+Use [Merge Data](merge-data.md) when the new data should update an OfficeReports file that already contains imported data.
+
+This is common when:
+- you started building the report on preliminary data
+- fieldwork is still in progress
+- you received a newer export of the same study
+- you want to add new respondents while also updating respondents that already exist
+- you want to add extra variables to data that was already imported
+
+In those situations, **Merge Data** is right choice.
+
+## Supported data sources
 
 OfficeReports supports these data sources:
 
@@ -25,7 +50,7 @@ OfficeReports supports these data sources:
 
 ![Import data in the OfficeReports Ribbon Tab](/Resources/Images/DataImportMenu_297x646.png)
 
-## Import Data
+## Import data
 
 1. Open the OfficeReports menu in Excel.
 2. Select **Add Data**.
@@ -34,29 +59,74 @@ OfficeReports supports these data sources:
 5. Select the variables you want to import.
 6. Click **Start**.
 
-When the import is complete, OfficeReports opens the [Data Editor](dataeditor.md), where you can review and recode variables if needed.
+When the import is complete, OfficeReports opens the [Data Editor](dataeditor.md), where you can review the imported data and recode variables if needed.
 
 ![Data Import Form](/Resources/Images/DataImport.png)
 
 > **Note:** If you import an SPSS `.sav` file that contains **Multiple Response Sets**, OfficeReports automatically imports each set as a derived variable and hides the original variables in the groups.
 
-## Merge Data
+## After importing data
 
-Use [Merge Data](merge-data.md) when you need to import more respondents, add more data for existing respondents, or update data that has already been imported.
+After the import, always review the result before continuing.
 
-## Import from Different Data Formats
+Check:
+- whether the total number of respondents looks correct
+- whether the expected variables were imported
+- whether important wave or period values are present
+- whether variable types and category values look correct
+- whether any recoding is needed in the Data Editor
+
+If this is the first import for the report, you can continue with table creation, filtering, weighting, and report setup.
+
+If the report already existed before the import, also check whether you should have used [Merge Data](merge-data.md) instead.
+
+## Import more data later
+
+If you need to import more data into an OfficeReports file that already contains data, first decide whether the new dataset contains:
+
+- only completely new respondents
+- or a mix of new respondents and respondents that were already imported earlier
+
+If the new dataset may overlap with already imported respondents, use [Merge Data](merge-data.md) instead of importing all cases as new cases.
+
+Importing overlapping data as all new cases can create duplicate respondents.
+
+## Weighting
+
+If your report uses weighted tables and you import more data, make sure the new respondents also receive valid weight values.
+
+If you do not import a weight variable, or if the new respondents get missing or zero weight values, those respondents are ignored in weighted tables.
+
+This means:
+- the data may look correctly imported in the variable list
+- but weighted tables may still show only the old wave or fewer respondents than expected
+
+If needed:
+- import the weight variable together with the new data
+- or update or recalculate the weight variable after the import
+
+See also [Weighting](../data-analysis/weighting.md).
+
+## Merge data
+
+Use [Merge Data](merge-data.md) when you need to:
+- import more respondents into an existing OfficeReports file
+- update data that has already been imported
+- add more information to respondents that already exist
+
+This is especially common in tracking studies, or in studies where you started working with preliminary data before fieldwork has finished.
+
+## Import from different data formats
 
 ### Import from SPSS (`.sav`)
 
 SPSS is the recommended import format. Compared to Excel, it contains more information about the data.
 
-Read more about the [import process](#the-import-process).
-
 This video shows how to import data: [SPSS import](http://youtu.be/CssMsUPFEok?hd=1).
 
 ### Import from Excel
 
-You can import Excel data directly into OfficeReports. However, when possible, use SPSS (`.sav`) or Triple-S instead, because these formats contain more metadata such as category order and variable types.
+You can import Excel data directly into OfficeReports. However, when possible, use SPSS (`.sav`) or Triple-S instead, because those formats contain more metadata such as category order and variable types.
 
 OfficeReports requires this Excel structure:
 
@@ -67,13 +137,11 @@ OfficeReports requires this Excel structure:
 
 After you select the workbook, the import can start.
 
-Read more about the [import process](#the-import-process).
-
 This video shows how: [Excel import](http://youtu.be/UW8otA06ZVk?hd=1)
 
 ### Import from CSV
 
-You can import CSV files into OfficeReports. However, when possible, use SPSS (`.sav`) or Triple-S instead, because these formats contain more metadata such as category order and variable types.
+You can import CSV files into OfficeReports. However, when possible, use SPSS (`.sav`) or Triple-S instead, because those formats contain more metadata such as category order and variable types.
 
 When you import a CSV file, this window opens:
 
@@ -81,18 +149,16 @@ When you import a CSV file, this window opens:
 
 These settings define how OfficeReports reads the CSV file.
 
-Read more about the [import process](#the-import-process).
-
 ### Import from Triple-S
 
-Triple-S is a standard format developed for the market research industry. Compared to Excel, it is the recommended format.
+Triple-S is a standard format developed for the market research industry and is recommended over Excel when available.
 
 Triple-S data uses two files:
 
-- A metadata file, for example `.xml` or `.sss`
-- A raw data file, for example `.dat`
+- a metadata file, for example `.xml` or `.sss`
+- a raw data file, for example `.dat`
 
-### Import an OfficeReports Database
+### Import an OfficeReports database
 
 You can import data from an existing OfficeReports database file with the extension `.ordb` or `.ordbx`.
 
@@ -118,14 +184,10 @@ OfficeReports includes direct integration with Alchemer.
 
 After the import, OfficeReports opens the [Data Editor](dataeditor.md), where you can review the imported data and [recode the variables](recoding-variables.md) if needed.
 
-### Import from a Database
+### Import from a database
 
-You can import from database like Access, MSSQL, MySQL or any other kind of database supporting ODBC.
+You can import data from databases such as Access, MSSQL, MySQL, or any other database that supports ODBC.
 
 1. Open **Add Data**.
 2. Select **Database**, and click the type of connection you need.
-3. Follow the instructions
-
-## Weighting
-
-> **Note:** If you have created 'weigthed' tables and importing more data, make sure you either import a weight variable or update the existing weight variable with newly calculated weights. Respondents without a weight-value or with weight-value 0 are ignored in weighted tables.
+3. Follow the instructions.

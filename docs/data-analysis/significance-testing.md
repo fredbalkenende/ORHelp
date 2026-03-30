@@ -1,6 +1,6 @@
 ﻿# Significance Testing
 
-Use significance testing to identify statistically significant differences in tables and charts. You can define both **T-Test** and **Z-Test** settings.
+Use significance testing to identify statistically significant differences in tables and charts. You can define both **T-Test** and **Z-Test** settings, and you can define which columns are compared and how significant differences are shown.
 
 ![Statistics in the Table Definition Form](/Resources/Images/TabledefinitionStats.png)
 
@@ -13,6 +13,10 @@ When you apply significance testing to a table or chart, OfficeReports opens the
 You can also open this window by clicking the button below.
 
 ![Column Comparing definition button](/Resources/Images/OfficeReports Analytics/Significance Visualization_40x35.png)
+
+## Significance Calculation Settings
+
+Use the [Statistics dialog](statistics.md) to define the statistical methods and thresholds.
 
 ## Define Significance Testing
 

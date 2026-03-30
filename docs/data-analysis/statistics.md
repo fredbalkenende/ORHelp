@@ -1,16 +1,34 @@
 ﻿# Statistics
 
-Use **Statistics** to define the statistical settings that OfficeReports uses in tables and charts.
+Use **Statistics** to define the statistical methods, thresholds, and calculation rules that OfficeReports uses in tables and charts.
+
+These settings control how significance tests and other statistical calculations are carried out.
+
+If you want to define **which columns are compared** in a specific table or chart, or **how significant differences are visualized**, see [Significance Testing](significance-testing.md).
 
 ![Statistics in the OfficeReports Ribbon Tab](/Resources/Images/StatisticsInRibbon.png)
 
-When your dataset is a sample rather than a full population, there is uncertainty when you apply the results to the population. OfficeReports provides statistical tests that help you determine whether differences in tables and charts are statistically significant or whether they may be due to chance.
+When your dataset is a sample rather than a full population, there is uncertainty when you apply the results to the population. OfficeReports provides statistical tests and related settings that help you determine whether differences in tables and charts are statistically significant or whether they may be due to chance.
 
 When you click **Statistics**, OfficeReports opens this window:
 
 ![Statistics Form](/Resources/Images/StatisticsWindow_896x1041.png)
 
-## Confidence Levels for T-Test and Z-Test
+## What Statistics controls
+
+Use **Statistics** to define settings such as:
+
+- confidence levels for T-Test and Z-Test
+- minimum base and low base thresholds
+- T-Test and Z-Test calculation method
+- whether to compensate for overlap
+- whether weighted tables use effective base or unweighted base in tests
+- confidence interval settings
+- how weighted standard deviation is calculated
+- how weighted standard error is calculated
+- Chi Square and related statistical tests
+
+## Confidence levels for T-Test and Z-Test
 
 Use **Confidence Levels** to define the confidence level for:
 
@@ -29,8 +47,6 @@ You can also add **Confidence Level 2**. This level must be lower than **Confide
 
 This makes it possible to show two significance levels in the same table, for example `95%` and `90%`.
 
-Read more about [specifying which columns to test and how to visualize significant differences](significance-testing.md).
-
 ## Minimum Base and Low Base
 
 Use **Minimum Base** and **Low Base** to define base thresholds for significance testing.
@@ -41,15 +57,20 @@ If you define a **Minimum Base** character, OfficeReports adds that character to
 
 If you define a **Low Base** character, OfficeReports adds that character to values where the base is below the low base threshold.
 
+You can also define whether:
+
+- only the minimum-base character is shown
+- the low-base marker is shown as cell formatting
+- significance testing should be skipped when the base is below the low-base threshold
+- low-base markers should always be shown
+
 > **Note:** Base notifications are based on the unweighted base.
 
-## Always Show Base Notifications
+## T-Test and Z-Test calculation method
 
-By default, OfficeReports only shows **Minimum Base** and **Low Base** notifications when significance testing is applied.
+Use these settings to define how OfficeReports carries out significance tests.
 
-Select **Always show base notifications** if you want OfficeReports to show these notifications even when significance testing is not used.
-
-## T-Test
+### T-Test
 
 Use **T-Test** to compare column means in a table row and test whether the mean in one column is significantly different from the mean in another column.
 
@@ -57,7 +78,7 @@ By default, OfficeReports uses **Student's T-Test** and compensates for overlap.
 
 You can also select **Welch's T-Test**. This test does not assume equal variances and calculates the degrees of freedom from the group sizes and variances.
 
-## Z-Test
+### Z-Test
 
 Use **Z-Test** to compare column proportions row by row.
 
@@ -65,9 +86,18 @@ This test checks whether the proportion in one column is significantly different
 
 The proportion is calculated as the cell count divided by the column base.
 
-## Effective Base
+You can also define whether OfficeReports should **compensate for overlap**.
 
-When tables use weighting, OfficeReports uses the **Effective Base** by default in statistical tests instead of the simple weighted base.
+## If weighted, use
+
+When tables use weighting, OfficeReports can use different base definitions in significance tests.
+
+Options include:
+
+- **Effective Base**
+- **Unweighted Base**
+
+By default, OfficeReports uses the **Effective Base** in statistical tests instead of the simple weighted base.
 
 This setting only affects weighted tables.
 
@@ -100,10 +130,72 @@ OfficeReports adds:
 
 ![Frequency Table with confidence interval](/Resources/Images/OfficeReports Analytics/Confidence Interval around.png)
 
-## Chi-Square Test
+## Calculation of weighted standard deviation
+
+Use this setting to define how OfficeReports calculates weighted standard deviation.
+
+OfficeReports can:
+
+- detect whether the used weight is a frequency weight or a sample/probability weight
+- or treat the weights as frequency weights
+
+Use this when weighted statistics should follow a specific interpretation of the weight variable.
+
+## Calculation of the weighted standard error
+
+Use this setting to define how OfficeReports calculates weighted standard error.
+
+Options include:
+
+- **Use unweighted base**
+- **Use weighted base**
+- **Use effective base**
+
+This is especially relevant for weighted tables and charts.
+
+## Chi Square and related tests
 
 Use **Chi-Square Test** in cross tables to test whether the variables in the rows and columns are independent.
 
 For example, you can use this test to determine whether differences in ratings depend on gender.
 
 ![Crosstab with Chi Square](/Resources/Images/OfficeReports Analytics/Chi Square test_2.png)
+
+OfficeReports also provides related statistical options and links for topics such as:
+
+- Chi Square
+- T-Test (Column Means Test)
+- Z-Test (Column Proportions Test)
+- Correlation
+- Confidence Interval
+
+## When should I use Statistics?
+
+Use **Statistics** when you want to define the statistical rules used across tables and charts.
+
+Examples:
+
+- change the confidence level from `95%` to `90%`
+- change the minimum base or low base threshold
+- choose Student's T-Test or Welch's T-Test
+- define how weighted tables should handle the base in significance testing
+- add confidence intervals
+- control weighted standard deviation or weighted standard error settings
+
+## When should I use a different settings page?
+
+Use [Significance Testing](significance-testing.md) when you want to define:
+
+- which columns should be compared
+- whether to use pairwise testing or specific column combinations
+- how significant differences should be visualized in a specific table or chart
+
+Use [Table Settings](table-settings.md) when you want to define default table settings such as:
+
+- default weight for tables
+- how significance compared to total is displayed
+- whether significance characters are shown as superscript
+
+Use [Table Layout](table-layout/table-layout.md) when you want to control how tables look and how significance colors are displayed.
+
+Use [Filtering](../reporting/filtering.md) when you want to control which respondents are included in the report or table.

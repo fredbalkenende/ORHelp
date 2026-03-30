@@ -14,7 +14,7 @@ You can then use the Lookup Table to populate a chart or a table.
 
 ![Lookup Table video](/Resources/Images/AggregateData.png)
 
-## Mass Create Lookup Tables
+## Bulk Create Lookup Tables
 
 Instead of creating all Lookup Tables manually, you can create a worksheet that contains flexible Lookup Table definitions.
 
@@ -32,7 +32,7 @@ You can do this in either of these ways:
 
 The second option creates a worksheet named **Table Definitions** in the current workbook and fills in the required columns.
 
-After you create the table definitions, click **Mass Create** to create the Lookup Tables. If you did not create a **Table Definitions** worksheet, select an Excel workbook that contains the Lookup Table definitions in the first worksheet.
+After you create the table definitions, click **Bulk Create** to create the Lookup Tables. If you did not create a **Table Definitions** worksheet, select an Excel workbook that contains the Lookup Table definitions in the first worksheet.
 
 You can define these settings:
 
