@@ -28,7 +28,7 @@ To insert a Verbatim List:
 
 Read more about [Verbatim Lists](verbatim-lists.md).
 
-## Mass Update
+## Bulk Update
 
 Use **Bulk Edit** when you need to update multiple tables with the same settings in one process.
 

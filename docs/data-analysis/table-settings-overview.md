@@ -80,7 +80,9 @@ Use **Default Table Settings** when the question is:
 
 ### 5. Table Layout
 
-Use [Table Layout](table-layout/table-layout.md) to define how crosstabs and tables look, and how numbers and significance are displayed.
+Use [Table Layout](table-layout/table-layout.md) to define:
+- how the table looks
+- whether a table is optimized for analysis in Excel or visualization in PowerPoint
 
 Examples:
 - Excel layout versus PowerPoint layout
