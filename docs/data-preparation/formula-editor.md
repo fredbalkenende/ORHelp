@@ -1,126 +1,277 @@
-﻿
+﻿# Formula Editor
 
-# Formula Editor
+Use the **Formula Editor** to create and edit formulas for derived variables in OfficeReports.
 
-Use the Formula Editor to create and edit formulas for derived variables in OfficeReports. The formulas are calculculated at the respondent level.
+Formulas are calculated at the **respondent level**.
 
 You can use the Formula Editor for:
+- categories in derived categorical variables
+- derived numeric variables
+- derived date variables
 
-* Categories in derived categorical variables
-* Derived numeric variables
-* Derived date variables
+![Formula Editor Form](/Resources/Images/OfficeReports Analytics/The Formula Editor.png)
 
-!\[Formula Editor Form](/Resources/Images/OfficeReports Analytics/The Formula Editor.png)
+## How formulas are evaluated
 
-## Reference Categories
+OfficeReports evaluates the formula for each respondent.
+
+This means a formula can return:
+- **true** or **false** for each respondent
+- a **numeric value**
+- a **date value**
+
+The expected result depends on where the formula is used:
+
+- formulas for **categories** in derived categorical variables should return **true** or **false**
+- formulas for **derived numeric variables** should return a **number**
+- formulas for **derived date variables** should return a **date value**
+
+## Reference categories
 
 Reference a category by combining the variable name and category name with a period inside square brackets.
 
 Example:
 
-`\[Gender.Male]`
+`[Gender.Male]`
 
-You can also use these special category references to create a category containing all respondents that have answered the variable ('Observed'), where no answer at all is registered ('Missing'), if the variable answer has a Value ('HasValue') (to filter out categories marked with 'No Value' (like 'don't know'), and finally the value of the answered category ('Value').
-Please note that the last one ([Variable.!Value]`) returns a numeric result. The first three return 'true' or 'false' (boolean).
+This returns **true** for respondents in category **Male**, and **false** for all other respondents.
 
-* `\[Gender.!Observed]` to reference all observed values for a variable
-* `\[Gender.!Missing]` to reference all missing values for a variable
-* `\[Variable.!HasValue]` to reference observations where the category has a value
-* `\[Variable.!Value]` to reference the value of the observed category
+### Special category references
 
-## Reference Variables
+You can also use these special references:
 
-Reference all non-categorical variables by using the variable name inside square brackets.
+- `[Gender.!Observed]`  
+  Returns **true** when the variable has an observed value.
+
+- `[Gender.!Missing]`  
+  Returns **true** when no answer is registered for the variable.
+
+- `[Variable.!HasValue]`  
+  Returns **true** when the answered category has a value. This is useful when you want to exclude categories marked as **No Value**, such as `Don't know`.
+
+- `[Variable.!Value]`  
+  Returns the numeric value of the answered category.
+
+> **Important:** `[Variable.!Value]` returns a **numeric** result.  
+> The other special references above return **true** or **false**.
+
+## What is the value of `!Value`?
+
+`[Variable.!Value]` returns the value of the answered category.
+
+For a normal categorical variable, this is the value of the selected category.  
+For a multiple response variable, it returns the **sum of the values of all answered categories**.
+
+By default, the value of a category is its sequence number in the variable’s category list.  
+For example, the first category has value `1`, the second category has value `2`, and so on.
+
+This default can be overridden by assigning a specific value to the category. In that case, `!Value` returns the assigned category value instead of the default sequence number.
+
+### Example: normal categorical variable
+
+Suppose variable `Satisfaction` has these categories:
+
+- `Very dissatisfied` = `1`
+- `Dissatisfied` = `2`
+- `Neutral` = `3`
+- `Satisfied` = `4`
+- `Very satisfied` = `5`
+
+If a respondent answered **Satisfied**, then:
+
+`[Satisfaction.!Value]`
+
+returns:
+
+`4`
+
+### Example: multiple response variable
+
+Suppose variable `BrandsUsed` is a multiple response variable with these category values:
+
+- `Brand A` = `1`
+- `Brand B` = `1`
+- `Brand C` = `1`
+- `Brand D` = `1`
+
+If a respondent selected **Brand A**, **Brand C**, and **Brand D**, then:
+
+`[BrandsUsed.!Value]`
+
+returns:
+
+`3`
+
+This is useful when all categories in a multiple response variable have value `1`, because `!Value` then returns the number of selected categories.
+
+## Reference variables
+
+Reference a non-categorical variable by using the variable name inside square brackets.
 
 Example:
 
-`\[Age]`
+`[Age]`
 
-You can also test whether a numerical variable is observed or missing:
+You can also test whether a numeric variable is observed or missing:
 
-* `\[Variable.!Observed]`
-* `\[Variable.!Missing]`
+- `[Variable.!Observed]`
+- `[Variable.!Missing]`
 
-## Use Formulas for Categories
+## Use formulas for categories
 
-Create formulas for categories that return a Boolean value: `true` or `false`.
+Formulas for categories in derived categorical variables should return a **Boolean** value:
 
-If you use a Boolean expression for a numeric derived variable:
+- `true`
+- `false`
 
-* `true` returns `1`
-* `false` returns `0`
+Example:
 
-## Use Arithmetic Operators
+`[Gender.Male] AND [Age] > 50`
+
+This returns **true** for male respondents older than 50.
+
+## Use category formulas in numeric variables
+
+Boolean expressions can also be used in **numeric** formulas.
+
+In numeric calculations:
+- `true` is treated as `1`
+- `false` is treated as `0`
+
+This is useful when you want to count how often a condition is met.
+
+For example, if you want to count how many times **Agree** was answered across several questions, you can add Boolean expressions together:
+
+`[Q1.Agree] + [Q2.Agree] + [Q3.Agree] + [Q4.Agree]`
+
+For each respondent, OfficeReports treats each `Agree` condition as `1` when true and `0` when false, then adds the results.
+
+## Use arithmetic operators
 
 Use arithmetic operators to combine two operands and return a calculated value.
 
-|Operator|Description|
-|-|-|
-|`+`|Add|
-|`-`|Subtract|
-|`\*`|Multiply|
-|`/`|Divide|
-|`^`|Raise to a power|
-|`%`|Return the remainder after division|
+| Operator | Description |
+| - | - |
+| `+` | Add |
+| `-` | Subtract |
+| `*` | Multiply |
+| `/` | Divide |
+| `^` | Raise to a power |
+| `%` | Return the remainder after division |
 
-## Use Logical Operators
+## Use logical operators
 
 Use logical operators to compare values or combine expressions so the formula returns `true` or `false`.
 
-### Conditional Operators
+### Conditional operators
 
-|Operator|Description|
-|-|-|
-|`=`|Equal to|
-|`<`|Less than|
-|`>`|Greater than|
-|`<>`|Not equal to|
-|`!=`|Not equal to|
-|`<=`|Less than or equal to|
-|`\~>`|Not greater than|
-|`>=`|Greater than or equal to|
+| Operator | Description |
+| - | - |
+| `=` | Equal to |
+| `<` | Less than |
+| `>` | Greater than |
+| `<>` | Not equal to |
+| `!=` | Not equal to |
+| `<=` | Less than or equal to |
+| `>=` | Greater than or equal to |
 
-### Boolean Operators
+### Boolean operators
 
-|Operator|Description|
-|-|-|
-|`NOT`|Boolean NOT|
-|`AND`|Boolean AND|
-|`OR`|Boolean OR|
-|`XOR`|Boolean exclusive OR|
+| Operator | Description |
+| - | - |
+| `NOT` | Boolean NOT |
+| `AND` | Boolean AND |
+| `OR` | Boolean OR |
+| `XOR` | Boolean exclusive OR |
 
-## Use an If Expression
+## Use an if expression
 
 Use `if` to return different results depending on a condition.
 
-The syntax is:
+Syntax:
 
 `if(condition, result if true, result if false)`
 
 Example:
 
-`if(\[Age] > 50, \[Discount] \* 2, \[Discount])`
+`if([Age] > 50, [Discount] * 2, [Discount])`
 
-This formula doubles the discount when **Age** is greater than 50.
+This doubles the discount when **Age** is greater than 50.
 
 ## Often made mistakes
 
-Formulas defined for categories need to return a true or false for each respondent. So for a category, a formula like "\[Gender.Male] and \[Age]" is invalid and will result in an error message: "Error in expression evaluation: - 'and' must be used with expressions that are true or false, you cannot apply it to Numerical variables."
-"\[Gender.Male] and \[Age] > 50" is a valid expression.
+### 1. Mixing Boolean and numeric expressions incorrectly
 
-In case a bracket is missing like in "(\[day] = 16 and \[month= 1)", you will get error message "Input string was not in a correct format". Using the Formula Editor helps avoiding this kind of problem.
+Formulas defined for **categories** need to return **true** or **false** for each respondent.
 
-A formula like "\[Q1.Yes]) AND ] AND \[Q5] > 0" will result in error: "Unexpected character encountered"
+#### Wrong
 
+`[Gender.Male] AND [Age]`
 
-## Check the Results
+#### Why it is wrong
+
+`[Gender.Male]` is a Boolean expression, but `[Age]` is numeric.  
+`AND` can only be used with expressions that return **true** or **false**.
+
+#### Correct
+
+`[Gender.Male] AND [Age] > 50`
+
+This returns **true** only for male respondents older than 50.
+
+### 2. Missing brackets or malformed expressions
+
+A missing bracket can cause a parsing error.
+
+#### Wrong
+
+`([Day] = 16 AND [Month] = 1`
+
+#### Why it is wrong
+
+The closing bracket is missing.
+
+#### Correct
+
+`([Day] = 16 AND [Month] = 1)`
+
+Using the Formula Editor helps avoid this kind of mistake.
+
+### 3. Unexpected characters in the formula
+
+Typing stray brackets or extra symbols can cause an error such as **Unexpected character encountered**.
+
+#### Wrong
+
+`[Q1.Yes]) AND ] AND [Q5] > 0`
+
+#### Why it is wrong
+
+The formula contains extra closing brackets and invalid characters.
+
+#### Correct
+
+`[Q1.Yes] AND [Q5] > 0`
+
+### 4. Using `!Value` when a Boolean result is needed
+
+`[Variable.!Value]` returns a **number**, not **true** or **false**.
+
+If you use it in a category formula, make sure the full formula still returns a Boolean result.
+
+#### Example
+
+`[Q1.!Value] > 2`
+
+This is valid for a category formula, because the comparison returns **true** or **false**.
+
+## Check the results
 
 To verify the result of a formula:
 
 1. Select the variable you created.
-2. Select the variables you used in the formula.
+2. Select the variables used in the formula.
 3. Open the **Data View** tab.
 4. Review the data at respondent level.
 
-This helps you confirm that the formula returns the expected result for each respondent.
-
+This helps confirm that the formula returns the expected result for each respondent.
