@@ -2,7 +2,7 @@
 
 # Formula Editor
 
-Use the Formula Editor to create and edit formulas for derived variables in OfficeReports.
+Use the Formula Editor to create and edit formulas for derived variables in OfficeReports. The formulas are calculculated at the respondent level.
 
 You can use the Formula Editor for:
 
@@ -20,7 +20,8 @@ Example:
 
 `\[Gender.Male]`
 
-You can also use these special category references:
+You can also use these special category references to create a category containing all respondents that have answered the variable ('Observed'), where no answer at all is registered ('Missing'), if the variable answer has a Value ('HasValue') (to filter out categories marked with 'No Value' (like 'don't know'), and finally the value of the answered category ('Value').
+Please note that the last one ([Variable.!Value]`) returns a numeric result. The first three return 'true' or 'false' (boolean).
 
 * `\[Gender.!Observed]` to reference all observed values for a variable
 * `\[Gender.!Missing]` to reference all missing values for a variable
@@ -35,10 +36,10 @@ Example:
 
 `\[Age]`
 
-You can also test whether a variable is observed or missing:
+You can also test whether a numerical variable is observed or missing:
 
-* `\[Variable.!Observed]` returns `1` when true and `0` when false
-* `\[Variable.!Missing]` returns `1` when true and `0` when false
+* `\[Variable.!Observed]`
+* `\[Variable.!Missing]`
 
 ## Use Formulas for Categories
 
@@ -101,6 +102,16 @@ Example:
 `if(\[Age] > 50, \[Discount] \* 2, \[Discount])`
 
 This formula doubles the discount when **Age** is greater than 50.
+
+## Often made mistakes
+
+Formulas defined for categories need to return a true or false for each respondent. So for a category, a formula like "\[Gender.Male] and \[Age]" is invalid and will result in an error message: "Error in expression evaluation: - 'and' must be used with expressions that are true or false, you cannot apply it to Numerical variables."
+"\[Gender.Male] and \[Age] > 50" is a valid expression.
+
+In case a bracket is missing like in "(\[day] = 16 and \[month= 1)", you will get error message "Input string was not in a correct format". Using the Formula Editor helps avoiding this kind of problem.
+
+A formula like "\[Q1.Yes]) AND ] AND \[Q5] > 0" will result in error: "Unexpected character encountered"
+
 
 ## Check the Results
 

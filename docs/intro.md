@@ -27,7 +27,7 @@ When you work with already aggregated data, such as crosstabs in a workbook, rea
 When you work with raw data, such as SPSS datasets or workbooks containing data records, read this:
 
 * [Import your data file](data-preparation/import-data.md)
-* [Create crosstabs](data-analysis/create-table.md)
+* [Create crosstabs](data-analysis/tables-and-lists.md)
 * Read about [Data in OfficeReports](data-preparation/data-in-officereports.md)
 
 ### Special Chart Types
@@ -74,7 +74,7 @@ Before you create specific crosstabs, you may want to get an overview of your da
 
 ## Create Tables
 
-Read more about creating tables [here](data-analysis/create-table.md).
+Read more about table and list types, including crosstabs, grid tables, aggregate tables, low/high tables, and verbatim lists [here](data-analysis/tables-and-lists.md).
 
 ## Bulk Create Tables
 

@@ -41,7 +41,7 @@ Read more about [Color-Driven Icons](reporting/color-driven-icons.md).
 
 You can define groups of columns to compare.
 
-For example, enter `ABCD; EFG` to compare:
+For example, enter `ABCD;EFG` to compare:
 
 - columns **A**, **B**, **C**, and **D** with each other
 - columns **E**, **F**, and **G** with each other
