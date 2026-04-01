@@ -11,8 +11,8 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://fredbalkenende.github.io',
-  baseUrl: '/ORHelp/',
+  url: 'https://docs.officereports.com',
+  baseUrl: '/',
 
   organizationName: 'fredbalkenende',
   projectName: 'ORHelp',
