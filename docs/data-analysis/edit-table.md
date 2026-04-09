@@ -45,6 +45,51 @@ Read more about [Significance Testing](significance-testing.md).
 
 ![Table Statistics definition](/Resources/Images/TableStatistics.png)
 
+### Column Proportions (Z-Test)
+
+Use **Column Proportions (Z-Test)** to compare column proportions row by row.
+
+This test checks whether the proportion in one column is significantly different from the proportion in another column.
+
+OfficeReports calculates the proportion as the cell count divided by the column base.
+
+### Column Means (T-Test)
+
+Use **Column Means (T-Test)** to compare column means in a table row.
+
+This test checks whether the mean in one column is significantly different from the mean in another column.
+
+### Apply tests to
+
+#### Column combinations
+
+Use **Column combinations** to define which columns should be tested against which other columns.
+
+Click the **...** button to open the **Column combinations to test** dialog.
+
+You can define:
+
+- **standard column combinations**, such as `ABCD;EFG`
+- **pairwise column combinations**, such as `AB`, `BA`, `next`, `previous`, or a custom pairwise definition
+
+In a pairwise comparison, OfficeReports visualizes significant differences by using fill colors or font colors instead of significance characters.
+
+#### Each column vs. total
+
+Use **Each column vs. total** when you want OfficeReports to test each column against the **Total** column.
+
+### Properties
+
+#### Hide low base marker
+
+Use **Hide low base marker** when you do not want to show the low-base marker in this table.
+
+#### Invert sig. colors
+
+Use **Invert sig. colors** to reverse the colors used to show significant differences.
+
+The significance colors themselves are defined in the table layout.
+
 ### Weighting
 
 To use weighted data, specify a **Weight Variable**. This can be:
@@ -54,7 +99,7 @@ To use weighted data, specify a **Weight Variable**. This can be:
 
 For information about calculated weights, see [Weighting Data](weighting.md).
 
-If you need to weight all or most tables, set a default weight variable in **OfficeReports > General Settings**.
+If you need to weight all or most tables, set a default weight variable in [**Table Settings**](table-settings.md).
 
 ## Sorting
 
@@ -64,37 +109,51 @@ OfficeReports can sort rows and columns in ascending order, descending order, or
 
 ![Table Sorting definition](/Resources/Images/TablePaneSort.png)
 
-If you use a **Reporting Table Layout** in **Reporting Mode**, you can also sort **Mean** or **Total** together with the categories.
+If you use a **Reporting Table Layout**, you can also sort **Mean** or **Total** together with the categories.
 
 ## Layout
 
-Use the **Layout** tab to control the table layout.
+Use the **Layout** tab to control the layout and text display of an existing table.
 
 ![Table Layout definition](/Resources/Images/TablePaneLayout.png)
 
 By default, OfficeReports uses the layout defined in **Layout Settings**. You can override this for an individual table by selecting a different layout in the **Layout** list.
 
-### Title for Frequency Tables
+### Layout
 
-For tables that contain one variable, OfficeReports uses the variable text as the default title.
+Use **Layout** to select the table layout you want to use for this table.
 
-To use a different title, enter it in the **Title** field.
+### Keep the current layout
 
-### Title for Cross Tables
+Use **Keep the current layout** to keep the current table formatting when the table is recalculated or updated.
 
-For tables that contain two variables, OfficeReports provides several title options.
+When this option is selected, OfficeReports does not reapply the selected layout definition. This makes it possible to format the table manually and keep that formatting.
 
-The title can be:
+### Keep the current texts
 
-- **Variable text**
-- **Optional variable text**
-- **Variable text x Optional variable text**
-- **Optional variable text x Variable text**
-- **User defined title**
+Use **Keep the current texts** to keep the current table texts when the table is recalculated or updated.
 
-![User defined title for table](/Resources/Images/OfficeReports Analytics/Title cross.png)
+When this option is selected, OfficeReports does not rewrite the table texts. This makes it possible to change the texts manually and keep those changes.
 
-The default title setting is defined in the **Layout** section.
+### Show Variable Text in Banner
+
+Use **Show Variable Text in Banner** to show the variable text in the banner above the table.
+
+### Hide the 'Table Base'
+
+Use **Hide the 'Table Base'** to hide the **Table Base** row.
+
+### Column Base after Category text
+
+Use **Column Base after Category text** to show the column base together with the category text instead of in a separate base row.
+
+You can also define the text format, for example `(n=#)`, and choose whether the base should be shown on a new line.
+
+### Row Base after Category text
+
+Use **Row Base after Category text** to show the row base together with the category text instead of in a separate base column or row.
+
+You can also define the text format, for example `(n=#)`, and choose whether the base should be shown on a new line.
 
 ### Hide the Explanation of the Cell Summary Variable
 

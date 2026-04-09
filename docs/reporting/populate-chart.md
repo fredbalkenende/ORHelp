@@ -1,10 +1,31 @@
 ﻿# Populate a PowerPoint Chart
 
-Use **Populate the selected Chart** to link workbook data to a selected PowerPoint chart. After you link the chart, OfficeReports can refresh it when the data changes.
+## Three Ways to Populate a Chart
+
+OfficeReports supports three ways to populate a PowerPoint chart:
+
+1. **Populate the selected Chart**  
+   Links the selected chart directly to the selected data range. This most commonly used method is explained below.
+
+2. **Populate the Chart Workbook**  
+   Writes the selected data to the workbook behind the chart without redefining the chart series automatically. Read [more](populate-chart-workbook.md).
+
+3. **Populate and use 'Advanced Chart Type'**  
+   Creates the chart by using one of the advanced chart types in OfficeReports. Read [more](chart-types.md).
+
+The available chart options depend on whether you work in the **Workbook Pane / Workbook Window** or in **Excel**.
+
+## Where These Options Are Available
+
+- In the **Workbook Pane** or **Workbook Window**, all three options are available.
+- When the workbook is open in **Excel**, only **Populate the selected Chart** is available, by clicking **Populate Selected** in the OfficeReports ribbon tab in PowerPoint.
+- **Populate the Chart Workbook** and **Populate and use 'Advanced Chart Type'** are not available when the workbook is open in Excel.
 
 ![Populate Chart popup menu](/Resources/Images/Populate Chart Dropdown.png)
 
-## Populate a Chart
+## Populate the selected Chart
+
+Use **Populate the selected Chart** to link workbook data to a selected PowerPoint chart. After you link the chart, OfficeReports can refresh it when the data changes.
 
 1. Select the chart in PowerPoint.
 2. In the **Workbook Pane**, select the data range you want to use.
@@ -47,7 +68,7 @@ This makes the texts easier to format and edit. It also makes it possible to rep
 
 Use **Set Source Data Manual** to add the data to the chart workbook without defining the chart series automatically.
 
-You must then define yourself which ranges the different chart series should use.
+You must then define which ranges the chart series should use.
 
 ### Switch Row/Column
 
@@ -115,11 +136,11 @@ For example, when you edit a stacked column chart, the **Chart Labels** tab is a
 
 ![Chart Labels settings](/Resources/Images/ChartOptionsLink.png)
 
-Use **Repositions overlapping labels** to move data labels so they do not overlap.
+Check **Repositions overlapping labels** to move data labels so they do not overlap.
 
 ![Chart with labels positioned so that do not overlap](/Resources/Images/OfficeReportsLink9. 0/Charts Link Excel Range to_50.png)
 
-Use **Color fill squeezed label boxes** together with this option to improve the appearance of labels in tight spaces.
+Check **Color fill squeezed label boxes** together with this option to improve the appearance of labels in tight spaces.
 
 ![Chart with labels that are not overlapping](/Resources/Images/OfficeReportsLink9. 0/Charts Link Excel Range to_49.png)
 
