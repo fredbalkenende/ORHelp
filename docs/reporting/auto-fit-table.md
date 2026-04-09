@@ -1,4 +1,8 @@
-﻿# AutoFit
+﻿---
+title: AutoFit PowerPoint Tables
+---
+
+# AutoFit
 
 Use **AutoFit** to make a PowerPoint table match the number of rows and columns in the data range.
 

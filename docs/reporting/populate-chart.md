@@ -17,7 +17,7 @@ If you are working in Excel instead of the **Workbook Pane**:
 2. Select the data range in Excel.
 3. Click **Populate Selected** in the ribbon tab in PowerPoint.
 
-![Populate in the Presento Ribbon Tab](/Resources/Images/Populate in ribbon.png)
+![Populate in the OfficeReports Ribbon Tab](/Resources/Images/Populate in ribbon.png)
 
 After you populate the chart, OfficeReports links it to the selected data range. When the data changes, you can refresh the chart.
 
@@ -122,3 +122,5 @@ Use **Repositions overlapping labels** to move data labels so they do not overla
 Use **Color fill squeezed label boxes** together with this option to improve the appearance of labels in tight spaces.
 
 ![Chart with labels that are not overlapping](/Resources/Images/OfficeReportsLink9. 0/Charts Link Excel Range to_49.png)
+
+

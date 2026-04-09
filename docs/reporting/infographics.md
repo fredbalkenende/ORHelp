@@ -4,7 +4,7 @@ Use **Infographics** to insert, edit, and populate infographic elements in Power
 
 OfficeReports infographics are groups of PowerPoint shapes. In the **Infographics** window, you can choose between sliders, signal shapes, filled shapes, custom data labels, and gauge charts, and then add the selected infographic to your presentation.
 
-![Infographics in the Presento Ribbon Tab](/Resources/Images/Infographics in Ribbon tab.png)
+![Infographics in the OfficeReports Ribbon Tab](/Resources/Images/Infographics in Ribbon tab.png)
 
 ## Insert, Edit, and Populate Infographics
 

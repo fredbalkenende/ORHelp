@@ -1,3 +1,7 @@
+---
+title: Tracking Study - Add New Wave
+---
+
 # Update a Tracking Study with a New Wave
 
 Use this workflow when you want to update an existing OfficeReports workbook and presentation with a new survey wave.

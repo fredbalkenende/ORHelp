@@ -2,7 +2,7 @@
 
 Use **Slide Library** to insert slides you use often into a presentation. This helps you add slides that are already prepared for data population.
 
-![Adding slides from the Presento Ribbon Tab](/Resources/Images/SlideLibraryInRibbon.png)
+![Adding slides from the OfficeReports Ribbon Tab](/Resources/Images/SlideLibraryInRibbon.png)
 
 ## Create a Slide Library
 

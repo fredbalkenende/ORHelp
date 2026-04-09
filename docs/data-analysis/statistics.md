@@ -43,7 +43,7 @@ By default, OfficeReports displays significant differences by using:
 - lowercase characters for the next 26 columns, if **Confidence Level 2** is not used
 - special characters up to column 96
 
-You can also add **Confidence Level 2**. This level must be lower than **Confidence Level 1**. OfficeReports displays differences for this level by using lowercase characters.
+You can also add **Confidence Level 2**. This level must be lower than **Confidence Level 1**. OfficeReports displays differences for this level by using lowercase characters, or different significance colors.
 
 This makes it possible to show two significance levels in the same table, for example `95%` and `90%`.
 

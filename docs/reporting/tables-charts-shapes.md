@@ -2,7 +2,7 @@
 
 Use **Populate the Selected ...** to link workbook data to native PowerPoint tables, charts, and shapes.
 
-![Populate from the Presento Ribbon Tab](/Resources/Images/Populate%20in%20ribbon.png)
+![Populate from the OfficeReports Ribbon Tab](/Resources/Images/Populate%20in%20ribbon.png)
 
 1. Select the shape, table, or chart on the slide.
 2. Select the data range in the worksheet.

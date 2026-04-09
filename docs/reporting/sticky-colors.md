@@ -4,7 +4,7 @@ Use **Sticky Colors** to keep chart colors consistent based on text values in th
 
 Before OfficeReports can apply sticky colors automatically, you must define which colors to use for specific texts.
 
-![Sticky Colors in the Presento Ribbon Tab](/Resources/Images/StickyColors in ribbon tab.png)
+![Sticky Colors in the OfficeReports Ribbon Tab](/Resources/Images/StickyColors in ribbon tab.png)
 
 ## Create a Sticky Color Definition
 

@@ -1,10 +1,14 @@
-﻿# Using Color-Driven Icons
+﻿---
+title: Color-Driven Icons
+---
+
+# Using Color-Driven Icons
 
 Use **Color-Driven Icons** to show icons such as arrows in PowerPoint tables and charts based on the fill color or font color in linked workbook cells.
 
 This helps you avoid manual updates, position icons consistently, and reuse the same icon definitions in other tables, charts, and presentations.
 
-![Color Driven Icons in the Presento Ribbon Tab](/Resources/Images/ColorDrivenIcons in Ribbon tab.png)
+![Color Driven Icons in the OfficeReports Ribbon Tab](/Resources/Images/ColorDrivenIcons in Ribbon tab.png)
 
 ## Create Color-Driven Icon Definitions
 

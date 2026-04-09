@@ -16,7 +16,7 @@ You can also open this window by clicking the button below.
 
 ## Significance Calculation Settings
 
-Use the [Statistics dialog](statistics.md) to define the statistical methods and thresholds.
+Use the [Statistics dialog](statistics.md) to define the statistical methods and thresholds. Here, you can also define if OfficeReports should calculate siginificance difference at 2 confidence levels at the same time. 
 
 ## Define Significance Testing
 
@@ -27,16 +27,6 @@ Use the [Statistics dialog](statistics.md) to define the statistical methods and
 
 If you click **OK** without changing any settings, OfficeReports tests all columns against all other columns and shows the result by using significance characters.
 
-## Pairwise Test
-
-Use a **Pairwise Test** when you want to compare columns in pairs.
-
-When you use a pairwise test, you do not need significance characters. Instead, you can use background colors or font colors to show significant differences.
-
-If the final output is a PowerPoint presentation, a pairwise test is often the best choice. OfficeReports can use the Excel colors to display significance arrows or other shapes in PowerPoint.
-
-Read more about [Color-Driven Icons](reporting/color-driven-icons.md).
-
 ## Define Column Combinations
 
 You can define groups of columns to compare.
@@ -46,9 +36,30 @@ For example, enter `ABCD;EFG` to compare:
 - columns **A**, **B**, **C**, and **D** with each other
 - columns **E**, **F**, and **G** with each other
 
+## Pairwise Test
+
+Use a **Pairwise Test** when you want to compare columns in pairs.
+
+When you use a pairwise test, OfficeReports uses background colors or font colors to show significant differences, instead of significance characters
+
+Use one of these 'predefined' column combinations:
+
+- `first` to compare all columns to the first column
+- `next` to compare each column to the next column
+- `previous` to compare each column to the previous column
+- `AB` to compare columns in pairs such as AB, CD, EF, and display the result in the first column of each pair
+- `BA` to compare columns in pairs such as BA, DC, FE, and display the result in the second column of each pair
+- `Segment Category` to compare all columns to the 'active' Segment Category (Used for Bulk creating 'Brand' reports, where we create a report for each brand in a Segment Filter)
+
+You can also use a custom definition by specifying a pairwise list of the columns to compare.
+
+If the final output is a PowerPoint presentation, a pairwise test is often the best choice. OfficeReports can use the Excel colors to display significance arrows or other shapes in PowerPoint.
+
+Read more about [Color-Driven Icons](reporting/color-driven-icons.md).
+
 ## Notes
 
-> **Note:** OfficeReports shows significance colors in the first mentioned column. For example, `BA` tests columns **A** and **B** and changes the background of the value in column **B**.
+> **Note:** OfficeReports shows significance colors in the first mentioned column. For example, `BA` tests columns **A** and **B** and changes the background of the value in column **B**, in case there is a significant difference.
 
 > **Note:** The significance colors are defined in [Table Layout](table-layout/table-layout.md).
 

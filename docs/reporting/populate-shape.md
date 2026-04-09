@@ -17,7 +17,7 @@ If you are working in Excel instead of the **Workbook Pane**:
 2. Select the data range in Excel.
 3. Click **Populate Selected** in the ribbon tab in PowerPoint.
 
-![Populate in the Presento Ribbon Tab](/Resources/Images/Populate in ribbon.png)
+![Populate in the OfficeReports Ribbon Tab](/Resources/Images/Populate in ribbon.png)
 
 After you populate the shape, OfficeReports links it to the selected data range. When the data changes, you can refresh the shape.
 

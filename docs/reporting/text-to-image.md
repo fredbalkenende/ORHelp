@@ -4,7 +4,7 @@ Use **Text-To-Image** to replace specific texts in PowerPoint tables and charts 
 
 This helps you place the correct image automatically, keep the positioning consistent, and reuse the same definitions in multiple presentations.
 
-![Text-To-Image in the Presento Ribbon Tab](/Resources/Images/TextToImage in Ribbon tab.png)
+![Text-To-Image in the OfficeReports Ribbon Tab](/Resources/Images/TextToImage in Ribbon tab.png)
 
 ## Create Text-To-Image Definitions
 

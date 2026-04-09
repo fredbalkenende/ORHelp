@@ -1,4 +1,8 @@
-﻿# Working with Aggregate Tables
+﻿---
+title: Aggregate Tables
+---
+
+# Working with Aggregate Tables
 
 Use Aggregate Tables to report questions asked multiple times, for example for the first mentioned brand and the second mentioned brand.
 

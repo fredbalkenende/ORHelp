@@ -46,6 +46,7 @@ OfficeReports supports these data sources:
 - Triple-S (`.xml`, `.sss`)
 - SurveyMonkey
 - Alchemer
+- Databases (MSSQL, MySQL, Access and all databases supporting ODBC)
 - OfficeReports database (`.db`, `.accdb`, OfficeReports database files)
 
 ![Import data in the OfficeReports Ribbon Tab](/Resources/Images/DataImportMenu_297x646.png)
@@ -184,9 +185,9 @@ OfficeReports includes direct integration with Alchemer.
 
 After the import, OfficeReports opens the [Data Editor](dataeditor.md), where you can review the imported data and [recode the variables](recoding-variables.md) if needed.
 
-### Import from a database
+### Import from a relational database
 
-You can import data from databases such as Access, MSSQL, MySQL, or any other database that supports ODBC.
+You can import data from databases such as Access, MSSQL, MySQL, or any other database that supports ODBC, like e.g. Oracle and Snowflake.
 
 1. Open **Add Data**.
 2. Select **Database**, and click the type of connection you need.

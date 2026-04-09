@@ -1,10 +1,12 @@
-﻿
+﻿# Visualization Settings
 
-# Report Settings! [OfficeReports Ribbon Tab](/Resources/Images/ReportSettings in ribbon.png)
+![OfficeReports Ribbon Tab](/Resources/Images/ReportSettings in ribbon.png)
 
 Please click the names to get more information about the unique features: [Color-Driven Icons](color-driven-icons.md), [Text-To-Image](text-to-image.md) and [Sticky Colors](sticky-colors.md).
 
-## Other Settings! [Report Settings Form](/Resources/Images/PPTSettings.png)
+## Other Settings
+
+![Report Settings Form](/Resources/Images/PPTSettings.png)
 
 ## Attach a worksheet to each slide
 

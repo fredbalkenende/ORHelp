@@ -118,7 +118,7 @@ You can also use a custom definition by specifying a pairwise list of the column
 
 Example:
 
-`CB; DC; DE; FE; GF;`
+`CB;DC;DE;FE;GF;`
 
 In this example, OfficeReports compares each column to the previous column, but does not compare to the first column.
 
