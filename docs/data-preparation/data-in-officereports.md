@@ -23,13 +23,14 @@ You can import the following data formats:
 
 OfficeReports saves the database in the same folder and with the same name as the workbook or presentation you are working on.
 
-!\[OfficeReports files: The workbook and the database](/Resources/Images/OfficeReports Analytics/The OfficeReports Database\_621x73.png)
+![The workbook and the database](/Resources/Images/OfficeReportsAnalytics/OfficeReportsDatabase.png)
 
 If you want to create a backup, back up both files.
 
 If you want to continue working in another folder or on another workstation, move or copy both files.
 
-When you open a workbook with OfficeReports data, OfficeReports creates a copy of the database in `C:\\Users\\<username>\\AppData\\Local\\OfficeReports`. OfficeReports uses this database while you work. Each time you save the workbook, OfficeReports overwrites the original database.
+When you open a workbook with OfficeReports data, OfficeReports creates a copy of the database in `C:\Users\<username>\AppData\Local\OfficeReports`. You can open this folder by entering `%LOCALAPPDATA%\OfficeReports` in the File Explorer address bar.
+OfficeReports uses this database while you work. Each time you save the workbook, OfficeReports overwrites the original database.
 
 If the workbook does not close correctly, for example because of a crash, power failure, or network problem, OfficeReports detects this and asks whether you want to use the unsaved database.
 

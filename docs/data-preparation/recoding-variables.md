@@ -36,7 +36,7 @@ Use **Create Interval Variable** to divide a numeric variable into intervals.
 
 A new derived categorical variable appears in the variable list with a blue icon.
 
-![derived variable icon](/Resources/Images/OfficeReports Analytics/Create Interval Variable based_1_17x14.png)
+![derived variable icon](/Resources/Images/OfficeReportsAnalytics/Create Interval Variable based_1_17x14.png)
 
 OfficeReports uses the same text as the original variable. The new variable name is based on the original variable name with **Intervals** added.
 
@@ -63,7 +63,7 @@ Create quantiles the same way you create intervals.
 1. Select the numeric variable.
 2. Click **Create Quantiles**.
 
-![Create quantiles popup menu](/Resources/Images/OfficeReports Analytics/Quantiles.png)
+![Create quantiles popup menu](/Resources/Images/OfficeReportsAnalytics/Quantiles.png)
 
 When you use a quantile variable in a table or chart definition, OfficeReports recalculates the quantiles based only on the cases included in the result.
 
@@ -112,7 +112,7 @@ Use **Create Periods** to divide a date variable into periods.
 1. Select the date variable.
 2. Click **Create Periods**.
 
-![Create periods popup menu](/Resources/Images/OfficeReports Analytics/Periods.png)
+![Create periods popup menu](/Resources/Images/OfficeReportsAnalytics/Periods.png)
 
 The new derived variable contains categories that divide the dates into the selected periods.
 
@@ -171,19 +171,19 @@ The selection order matters. If you select **Variable 2** before **Variable 1**,
 - **East and Female**
 - **West and Female**
 
-## Group Variables
+## Multiple Response Groups
 
 Multiple response questions are often imported as several variables, one for each answer option. OfficeReports supports this by grouping the variables.
 
-To group variables automatically, click **Find groups by name**. OfficeReports groups variables with similar labels, such as `Q1_1`, `Q1_2`, and `Q1_3`, into one variable named `Q1`.
+To group variables automatically, click **Multiple Response Group > Find and Create Groups by name...** in the Top Menu of the Data Editor. OfficeReports groups variables with similar labels, such as `Q1_1`, `Q1_2`, and `Q1_3`, into one variable named `Q1`.
 
 If the automatic result is not correct, group the variables manually.
 
-1. Open the variable window.
-2. Select **New Variable > Group Variables**.
+1. Open the Data Editor.
+2. Click **Multiple Response Group > Create Multiple Response Group...** in the Top Menu of the Data Editor.
 3. Select the variables you want to group.
 
-![Multiple Response Groups Form](/Resources/Images/OfficeReports Analytics/Group Variables.png)
+![Multiple Response Groups Form](/Resources/Images/OfficeReportsAnalytics/Group Variables.png)
 
 ### Group Different Variables
 
@@ -193,7 +193,7 @@ Example:
 
 If you group **Gender** and **Department**, the new variable contains the categories from both variables.
 
-![Example of a combined variable](/Resources/Images/OfficeReports Analytics/A simple grouping of two or.png)
+![Example of a combined variable](/Resources/Images/OfficeReportsAnalytics/A simple grouping of two or.png)
 
 ### Group Variables with the Same Category Texts
 
@@ -203,7 +203,7 @@ Example:
 
 The test dataset contains four variables regarding relations to other departments. Each variable contains one category, '1' = 'a relation'.
 
-We can produce a derived variable based on these four variables, but as the category name in each variable is the same it is relevant to replace it by the name of the underlying variable:! [Example of multiple response group](/Resources/Images/OfficeReports Analytics/Grouping variables where each.png)
+We can produce a derived variable based on these four variables, but as the category name in each variable is the same it is relevant to replace it by the name of the underlying variable:! [Example of multiple response group](/Resources/Images/OfficeReportsAnalytics/Grouping variables where each.png)
 
 ### Group 0/1 Variables
 
@@ -215,17 +215,17 @@ You have four variables for Microsoft Office training courses. The value `1` mea
 
 To group these variables:
 
-1. Open the variable window.
-2. Select **New Variable > Group Variables**.
+1. Open the Data Editor.
+2. Click **Multiple Response Group > Create Multiple Response Group...** in the Top Menu of the Data Editor.
 3. Select the course variables.
 4. Select **Exclude categories with the value '0'**.
-5. Click **Create Group Variable**.
+5. Click **Create Multiple Response Group**.
 
-![Create Multiple response Group](/Resources/Images/OfficeReports Analytics/Grouping a number of 0 1 variables_1.png)
+![Create Multiple response Group](/Resources/Images/OfficeReportsAnalytics/Grouping a number of 0 1 variables_1.png)
 
 OfficeReports creates a new derived variable like this:
 
-![Example of new group](/Resources/Images/OfficeReports Analytics/Grouping a number of 0 1 variables_2.png)
+![Example of new group](/Resources/Images/OfficeReportsAnalytics/Grouping a number of 0 1 variables_2.png)
 
 In this result:
 
@@ -253,7 +253,7 @@ You can organize open text responses into categories when the coding does not re
 1. Select the text variable.
 2. Click **Create Categories**.
 
-![Create Categories Button](/Resources/Images/OfficeReports Analytics/Derived Categorical Variables_1.png)
+![Create Categories Button](/Resources/Images/OfficeReportsAnalytics/Derived Categorical Variables_1.png)
 
 A new derived variable appears with a blue icon. It contains one category for each unique text in the original variable.
 
@@ -301,16 +301,44 @@ For automated report production, you can replace a static category name with the
 **Show Difference**  
 Instead of showing an actual value, you can show the difference compared with another category in the variable. For example, if **2018** shows `58%` and **2017** shows `48%`, you can display the difference as `10%`.
 
-![Crosstab showing difference with other column](/Resources/Images/OfficeReports Analytics/Advanced view_2_602x230.png)
+![Crosstab showing difference with other column](/Resources/Images/OfficeReportsAnalytics/Advanced view_2_602x230.png)
 
 ## Create Other Variables Like This One
 
 Use **Create other variables like this one** to apply the same derived-variable setup to other variables. This feature is available for derived categorical variables.
 
-1. Create a derived categorical variable.
-2. Select the derived variable.
-3. Click **Create other variables like this one**.
-4. Select the variables that should use the same setup.
+1. Select the derived variable.
+2. Click **Create other variables like this one**.
+3. Select the variables that should use the same setup.
+
+### Derived variables based on more than one variable
+
+If the derived variable uses more than one source variable in its category formulas, OfficeReports must decide which variable should be replaced. In this case, OfficeReports uses the first variable found in the formula of the first category as the variable to replace.
+
+For example, if the formula in the first category is:
+
+varX and varY
+
+OfficeReports will use varX as the variable to replace.
+
+When you select other variables in the dialog, OfficeReports will create new derived variables and replace varX in all category formulas. Any other variables used in the formulas, such as varY, will remain unchanged.
+
+### Replacing a different variable
+
+If you want OfficeReports to replace another variable, edit the formula of the first category so that the variable you want to replace appears first.
+
+For example, change:
+
+varX and varY
+
+to:
+
+varY and varX
+
+OfficeReports will then use varY as the variable to replace.
+
+After creating the new variables, we recommend checking the category formulas to make sure they are correct.
+
 
 ### Example: Parent Variable Is Numeric
 
@@ -347,7 +375,5 @@ You want to recode each variable into two categories:
 7. Select the other 14 categorical variables.
 
 OfficeReports creates the 14 new derived categorical variables with the same recode.
-
-> **Note:** A derived categorical variable is always based on one parent variable. OfficeReports changes only the formulas and formula elements related to that parent variable when you use **Create other variables like this one**.
 
 This short video introduces some of the options: [Creating New Variables](http://youtu.be/TVZzyg_Tsh0?hd=1)

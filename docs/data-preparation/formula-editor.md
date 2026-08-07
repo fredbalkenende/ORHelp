@@ -9,7 +9,7 @@ You can use the Formula Editor for:
 - derived numeric variables
 - derived date variables
 
-![Formula Editor Form](/Resources/Images/OfficeReports Analytics/The Formula Editor.png)
+![Formula Editor Form](/Resources/Images/OfficeReportsAnalytics/The Formula Editor.png)
 
 ## How formulas are evaluated
 

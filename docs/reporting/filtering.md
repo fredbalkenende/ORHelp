@@ -68,7 +68,7 @@ Use category-level filtering when you want filtering to apply only to one catego
 
 This does **not** filter the whole table. It only affects the specific category.
 
-1. Open the Variable window.
+1. Open the Data Editor.
 2. Select a category in a derived variable.
 3. Set the required category filter options.
 

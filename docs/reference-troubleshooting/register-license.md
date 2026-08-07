@@ -17,7 +17,7 @@ If you need to move your license to another machine, first deactivate the licens
 1. On the old computer, click **Deactivate license on this machine**.
 2. Complete the deactivation in the window that opens.
 
-![](/Resources/Images/OfficeReports Analytics/Move the License to another.png)
+![](/Resources/Images/OfficeReportsAnalytics/Move the License to another.png)
 
 ## Cancel the subscription
 

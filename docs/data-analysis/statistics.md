@@ -62,9 +62,19 @@ You can also define whether:
 - only the minimum-base character is shown
 - the low-base marker is shown as cell formatting
 - significance testing should be skipped when the base is below the low-base threshold
-- low-base markers should always be shown
 
+> **Note:** Use **Always show low base markers** to always display the low-base marker for values where the base is below the defined **Low Base** threshold, even when no significance test is defined for a table.
 > **Note:** Base notifications are based on the unweighted base.
+> **Note:** OfficeReports does not carry out significance tests on columns with a base below the defined **Minimum Base**.
+> **Note:** Aggregate variables are ignored in significance tests.
+
+### Base Markers
+
+To show base markers, first define the marker characters for **Minimum Base** and/or **Low Base**.
+
+For the **low-base marker** to be visible, you must either define a significance test for the table or select **Always show low base markers**.
+
+If you want to show the low-base marker in a table, make sure the table option **Hide low base marker** is not selected.
 
 ## T-Test and Z-Test calculation method
 
@@ -120,6 +130,7 @@ When you add confidence intervals to a table, OfficeReports assumes by default t
 - the sample is less than `10%` of the population
 
 If the sample represents more than `10%` of the population, enter the **Population Size** to adjust the calculation.
+For **Population Size**, leave the value as `0` if the population is large or unknown.
 
 You can only add confidence intervals to frequency tables.
 
@@ -128,7 +139,8 @@ OfficeReports adds:
 - an extra column that shows the confidence interval
 - an extra row for the mean confidence interval if the table contains a **Mean** row
 
-![Frequency Table with confidence interval](/Resources/Images/OfficeReports Analytics/Confidence Interval around.png)
+
+![Frequency Table with confidence interval](/Resources/Images/OfficeReportsAnalytics/Confidence Interval around.png)
 
 ## Calculation of weighted standard deviation
 
@@ -159,7 +171,7 @@ Use **Chi-Square Test** in cross tables to test whether the variables in the row
 
 For example, you can use this test to determine whether differences in ratings depend on gender.
 
-![Crosstab with Chi Square](/Resources/Images/OfficeReports Analytics/Chi Square test_2.png)
+![Crosstab with Chi Square](/Resources/Images/OfficeReportsAnalytics/Chi Square test_2.png)
 
 OfficeReports also provides related statistical options and links for topics such as:
 

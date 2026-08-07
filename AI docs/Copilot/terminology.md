@@ -9,6 +9,7 @@ Users may describe the same feature or concept with different words.
 When interpreting help questions, treat the terms below as closely related when the context matches.
 
 
+
 ## Survey Data Terms
 
 ### Case
@@ -70,6 +71,7 @@ Not every question is always stored as one simple variable, but in many help que
 * category labels
 * labels
 * codes and labels
+
 
 
 ## Table and Analysis Terms
@@ -198,6 +200,9 @@ It may also be called a **sig test** or **statistical significance test**.
 * statistical significance
 * significance letters
 
+## Base Markers
+
+**Base markers** may also be called **base notations** or **sample notations**
 
 ## Reporting and Output Terms
 
@@ -250,6 +255,7 @@ A **template** is a predefined report structure or slide setup used for repeated
 * template
 * reporting template
 * slide template
+
 
 
 ## Excel and PowerPoint Context Terms
@@ -314,6 +320,10 @@ A **chart** is a graphical data object in Excel or PowerPoint.
 * chart
 * graph
 * figure
+
+### Table row
+
+A **table row** is either a category in a frequency table or a crosstab, or a variable in a grid-table.
 
 ## Practical Interpretation Rules
 

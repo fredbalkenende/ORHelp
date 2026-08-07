@@ -15,7 +15,7 @@ Use **Merge Data** when you want to:
 - add extra variables to data that has already been imported
 - continue building a report while fieldwork is still in progress
 
-![Import Data Form](/Resources/Images/OfficeReports Analytics/MergeData_1288x826.png)
+![Import Data Form](/Resources/Images/OfficeReportsAnalytics/MergeData_1288x826.png)
 
 ## Variables
 

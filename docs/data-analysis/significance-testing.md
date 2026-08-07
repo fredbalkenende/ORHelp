@@ -12,7 +12,7 @@ When you apply significance testing to a table or chart, OfficeReports opens the
 
 You can also open this window by clicking the button below.
 
-![Column Comparing definition button](/Resources/Images/OfficeReports Analytics/Significance Visualization_40x35.png)
+![Column Comparing definition button](/Resources/Images/OfficeReportsAnalytics/Significance Visualization_40x35.png)
 
 ## Significance Calculation Settings
 
@@ -71,4 +71,4 @@ Read more about [Color-Driven Icons](reporting/color-driven-icons.md).
 
 This example shows the result of a pairwise test that uses fill colors to display significant differences.
 
-![Crosstab with significant difference](/Resources/Images/OfficeReports Analytics/Significance Visualization_3.png)
+![Crosstab with significant difference](/Resources/Images/OfficeReportsAnalytics/Significance Visualization_3.png)

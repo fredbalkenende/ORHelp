@@ -2,7 +2,7 @@
 
 Use **Categories** to add categories, merge categories, and create NET categories for categorical variables.
 
-The **Categories** button is located below the variable list in the variable window. It is available when you select a categorical variable.
+The **Categories** button is located below the variable list in the Data Editor. It is available when you select a categorical variable.
 
 ## Add a Category to an Original Variable
 
@@ -12,7 +12,7 @@ You can add a category to an original categorical variable, but this is usually 
 2. Click **Categories**.
 3. Add the new category.
 
-![Create Category Form](/Resources/Images/OfficeReports Analytics/Add a category to an original.png)
+![Create Category Form](/Resources/Images/OfficeReportsAnalytics/Add a category to an original.png)
 
 ## Add a Category to a Derived Variable
 
@@ -24,7 +24,7 @@ All categories in a derived variable are defined by a formula.
 4. Enter a name for the category.
 5. Add a formula for the category by using [The Formula Editor](formula-editor.md).
 
-![Categories popup menu](/Resources/Images/OfficeReports Analytics/Add a category to a derived.png)
+![Categories popup menu](/Resources/Images/OfficeReportsAnalytics/Add a category to a derived.png)
 
 ## Merge Categories
 
@@ -44,7 +44,7 @@ Or:
 
 OfficeReports creates an `OR` formula for the merged category.
 
-![Example of variable with merged categories](/Resources/Images/OfficeReports Analytics/Merge Categories.png)
+![Example of variable with merged categories](/Resources/Images/OfficeReportsAnalytics/Merge Categories.png)
 
 ## Create a NET Category
 
@@ -56,8 +56,8 @@ A NET is an extra category that combines two or more categories from the variabl
 2. Open **Categories**.
 3. Select **NET**.
 
-![Example of variable with NET category](/Resources/Images/OfficeReports Analytics/Create NET Top 2 box.png)
+![Example of variable with NET category](/Resources/Images/OfficeReportsAnalytics/Create NET Top 2 box.png)
 
 When OfficeReports creates tables that contain NET categories, it automatically formats the categories included in the NET as indented, italic, and slightly smaller.
 
-![Crosstab with NET category](/Resources/Images/OfficeReports Analytics/Create NET Top 2 box_1.png)
+![Crosstab with NET category](/Resources/Images/OfficeReportsAnalytics/Create NET Top 2 box_1.png)

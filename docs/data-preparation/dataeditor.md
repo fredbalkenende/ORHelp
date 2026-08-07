@@ -19,13 +19,13 @@ In **Data View**, you can view and edit all observations in the dataset.
 OfficeReports works with these variable types:
 
 - Categorical Variables 
-  ![Category Variable icon](/Resources/Images/OfficeReports Analytics/Variables_1_23x19.jpg)
+  ![Category Variable icon](/Resources/Images/OfficeReportsAnalytics/Variables_1_23x19.jpg)
 - Numerical Variables 
-  ![Numeric variable icon](/Resources/Images/OfficeReports Analytics/Variables_2_20x19.jpg)
+  ![Numeric variable icon](/Resources/Images/OfficeReportsAnalytics/Variables_2_20x19.jpg)
 - Date Variables 
-  ![Date variable icon](/Resources/Images/OfficeReports Analytics/Variables_3_21x19.jpg)
+  ![Date variable icon](/Resources/Images/OfficeReportsAnalytics/Variables_3_21x19.jpg)
 - Text Variables 
-  ![Text variable icon](/Resources/Images/OfficeReports Analytics/Variables_20x19.jpg)
+  ![Text variable icon](/Resources/Images/OfficeReportsAnalytics/Variables_20x19.jpg)
 
 Derived Variables have a blue icon.
 
@@ -52,11 +52,11 @@ Most tables are built using categorical variables, so OfficeReports includes ext
 ### Reorder categories
 
 1. Select a category.
-2. Use the arrow buttons in the upper-left corner of the Variable window to move the category.
+2. Use the arrow buttons in the upper-left corner of the Data Editor to move the category.
 
 You can also use the keyboard shortcuts **Ctrl+↑** and **Ctrl+↓**.
 
-![Reorder categories](/Resources/Images/OfficeReports Analytics/Reordering categories_512x267.png)
+![Reorder categories](/Resources/Images/OfficeReportsAnalytics/Reordering categories_512x267.png)
 
 ### Assign values to categories
 
@@ -66,7 +66,7 @@ In some cases, you may want to assign values to categories so you can calculate 
 
 ### Assign a significance character to a category
 
-When you create tables and charts that show significance letters, OfficeReports assigns letters automatically, such as **A** for column 1 and **B** for column 2. You can override this by assigning specific characters to categories in the Variable window.
+When you create tables and charts that show significance letters, OfficeReports assigns letters automatically, such as **A** for column 1 and **B** for column 2. You can override this by assigning specific characters to categories in the Data Editor.
 
 ### Use Do not sort for categories
 

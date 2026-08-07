@@ -19,7 +19,7 @@ Read more about [Table Layout](../data-analysis/table-layout/table-layout.md).
 
 ## Variables
 
-Use the variable window to define default table settings for variables you use often.
+Use the Data Editor to define default table settings for variables you use often.
 
 You can define defaults for:
 

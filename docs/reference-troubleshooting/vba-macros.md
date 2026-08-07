@@ -49,14 +49,14 @@ End Function
 Create a Table Layout in the [Table Layout](../data-analysis/table-layout/table-layout.md) settings.
 Enter the macro name in the Excel Macro field.
 
-![VBA Settings for Crosstab](/Resources/Images/OfficeReports Analytics/Appendix 3 Integrating Macros_479x455.png)
+![VBA Settings for Crosstab](/Resources/Images/OfficeReportsAnalytics/Appendix 3 Integrating Macros_479x455.png)
 
 ### Layout only available for
 
 A specific chart style may only be relevant for frequencies or crosstab charts. Select the context in which a type should be available.
 Please have a look at the macros in module "template" in the macro file. Your macros need to have the exact same parameters and return a string!
 
-![VBA Settings for Crosstab](/Resources/Images/OfficeReports Analytics/Appendix 3 Integrating Macros_479x455.png)
+![VBA Settings for Crosstab](/Resources/Images/OfficeReportsAnalytics/Appendix 3 Integrating Macros_479x455.png)
 
 ## Tables and Charts in PowerPoint
 

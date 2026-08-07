@@ -23,7 +23,7 @@ You can use any combination of categories from a categorical variable as a filte
 
 If a table contains a category that is filtered out, the category name is still shown, but the number of observations or responses is `0`. To hide a filtered-out category from the table, select **Do not show** in the **Options** box.
 
-!['Do not show in table' definition](/Resources/Images/OfficeReports Analytics/Filter_1_3.png)
+!['Do not show in table' definition](/Resources/Images/OfficeReportsAnalytics/Filter_1_3.png)
 
 ### Ignoring Filters
 
@@ -169,13 +169,13 @@ This feature works for frequency tables, cross tables, and grid tables. It works
 
 You can display the ranking by row or by column, and sort it in ascending or descending order.
 
-![Table ranking definition](/Resources/Images/OfficeReports Analytics/Rank.png)
+![Table ranking definition](/Resources/Images/OfficeReportsAnalytics/Rank.png)
 
 You can also choose to show the ranking only for categories with a minimum base of observations.
 
 For example, you can use ranking to show which department performs best on different dimensions. The ranking can be based on mean values or on statistics such as Top 2.
 
-![Ranked crosstab](/Resources/Images/OfficeReports Analytics/Rank_1.png)
+![Ranked crosstab](/Resources/Images/OfficeReportsAnalytics/Rank_1.png)
 
 By default, the table shows ranking as `1 of 5`. If you prefer `1 out of 5`, change this in [Table Settings](table-settings.md). You can also choose to show only the rank number.
 

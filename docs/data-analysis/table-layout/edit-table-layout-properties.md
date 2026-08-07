@@ -10,7 +10,7 @@ These properties control the overall structure and behavior of the layout, such 
 - how compact or separated the table should be
 
 When you select a table layout, OfficeReports shows a sample table based on example data in the preview pane. This makes it easier to see how the selected settings affect the final crosstab or reporting layout.
-![Table Layout definition settings](/Resources/Images/OfficeReports Analytics/Reverse Significance Test.png)
+![Table Layout definition settings](/Resources/Images/OfficeReportsAnalytics/Reverse Significance Test.png)
 
 ## Default Size
 
@@ -87,11 +87,9 @@ Use this option when:
 
 Select **Round the final results (XLS)** when the final values written to Excel should be rounded so that the stored value matches the displayed value.
 
-Without this setting, bar- and column charts in PowerPoint might show a bar/column with the same label (e.g. 2.6), but still have a slightly different height or width.
+Without this setting, bars or columns in PowerPoint charts may display the same label (for example, 2.6) but still have slightly different heights or widths. This happens because the underlying unrounded values may differ, for example 2.56 and 2.63.
 
-Use this option when:
-- the final Excel value should match what the user sees visually in charts
-- exported values
+Use this option when the values stored in Excel should exactly match the values shown to the user in charts.
 
 ### Do not merge cells in Row 1
 

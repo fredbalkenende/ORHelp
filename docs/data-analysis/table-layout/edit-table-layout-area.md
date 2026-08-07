@@ -4,7 +4,7 @@ Use **Edit Table Layout - Areas** to define the formatting for text areas and va
 
 When you select a table layout, OfficeReports shows a sample table based on example data to the right of the **OfficeReports Layout** pane.
 
-![Table Area definition](/Resources/Images/OfficeReports Analytics/Edit table layout Areas.png)
+![Table Area definition](/Resources/Images/OfficeReportsAnalytics/Edit table layout Areas.png)
 
 ## Text Areas
 
@@ -16,7 +16,7 @@ You can define formatting for these text areas:
 
 ## Value Areas
 
-![Another Table Area definition](/Resources/Images/OfficeReports Analytics/Edit Table Area Definition.png)
+![Another Table Area definition](/Resources/Images/OfficeReportsAnalytics/Edit Table Area Definition.png)
 
 You can define formatting for these value areas:
 
@@ -27,7 +27,7 @@ You can define formatting for these value areas:
 - **Mean**
 - **Std. Deviation**
 
-![Table Area definition](/Resources/Images/OfficeReports Analytics/Edit Table Area Definition.png)
+![Table Area definition](/Resources/Images/OfficeReportsAnalytics/Edit Table Area Definition.png)
 
 For value areas, you can define:
 
@@ -48,7 +48,7 @@ When OfficeReports adds characters to show low base, insufficient base, or signi
 
 Use **Custom Format** when you want to control how numbers are displayed.
 
-![Define custom Number formatting](/Resources/Images/OfficeReports Analytics/Format cells.png)
+![Define custom Number formatting](/Resources/Images/OfficeReportsAnalytics/Format cells.png)
 
 For example, you can define a format where:
 

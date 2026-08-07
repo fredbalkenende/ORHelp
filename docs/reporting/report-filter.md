@@ -17,7 +17,7 @@ For a broader explanation of filtering levels, table-level filtering, category-l
 
 ![Report Filters in the OfficeReports Ribbon Tab](/Resources/Images/ReportFilters.png)
 
-![Report Filters Form](/Resources/Images/OfficeReports Analytics/Report Filters_1_597x604.png)
+![Report Filters Form](/Resources/Images/OfficeReportsAnalytics/Report Filters_1_597x604.png)
 
 ## Report Filter
 

@@ -9,23 +9,29 @@ Use **Import Data** to add survey data to your OfficeReports file.
 
 OfficeReports stores the imported data in an OfficeReports database that has the same name as the file you are working with and the extension `.ordbx`.
 
-![Import Data icon](/Resources/Images/OfficeReports Analytics/Add Data_35x33.png)
+![Import Data icon](/Resources/Images/OfficeReportsAnalytics/Add Data_35x33.png)
 
 ![Import data Popup Form](/Resources/Images/AddData_396x509.png)
 
 As soon as you click the OfficeReports menu in Excel, the **Import Data** window opens. You can also open **Add Data** at any time to import data from another source.
 
-## When should I use Import Data?
+## When should I use Import Data?## When should I use Import Data?
 
-Use **Import Data** when you want to create an OfficeReports file or when you add data to an OfficeReports template for the first time.
+Use **Import Data** when:
 
-This is the normal starting point when you begin working on a study, tracker, or report.
+* creating a new OfficeReports file;
+* adding data to an OfficeReports template for the first time; or
+* adding a dataset that contains only respondents who have not previously been imported.
 
-You can also use **Import Data** later when the new dataset contains only respondents that are not yet present in the OfficeReports file.
+This is the usual starting point for a new study, tracker, or report. You will also normally use **Import Data** when adding a new wave to a tracker, provided that all respondents in the new wave are new.
 
 ## When should I use Merge Data instead?
 
-Use [Merge Data](merge-data.md) when the new data should update an OfficeReports file that already contains imported data.
+Use [Merge Data](merge-data.md) when the new dataset contains respondents who may already exist in the OfficeReports file.
+
+Existing respondents will be updated, while respondents who have not previously been imported will be added.
+
+Use **Merge Data** whenever you are unsure whether all respondents in the dataset are new.
 
 This is common when:
 - you started building the report on preliminary data
@@ -146,7 +152,7 @@ You can import CSV files into OfficeReports. However, when possible, use SPSS (`
 
 When you import a CSV file, this window opens:
 
-![Import CSV Data Form](/Resources/Images/OfficeReports Analytics/Importing data from CSV files_834x301.png)
+![Import CSV Data Form](/Resources/Images/OfficeReportsAnalytics/Importing data from CSV files_834x301.png)
 
 These settings define how OfficeReports reads the CSV file.
 
@@ -192,3 +198,20 @@ You can import data from databases such as Access, MSSQL, MySQL, or any other da
 1. Open **Add Data**.
 2. Select **Database**, and click the type of connection you need.
 3. Follow the instructions.
+
+## Reimporting data
+
+If you have made minor changes to a dataset that has already been imported, use **Merge Data** to import the updated dataset again. Existing respondents will be updated, and new respondents will be added.
+
+If you imported the wrong dataset, delete the imported data source first. Then use **Import Data** to import the correct dataset.
+
+When in doubt, deleting the existing data source and importing the dataset again is the safest option.
+
+## Deleting an imported dataset
+
+You can delete an imported dataset in the Data Editor:
+
+1. Open the **Data Editor**.
+2. At the top of the variable list, open **Used Data Sources**.
+3. Select the data source you want to delete.
+4. Press the **Delete** key, or click **Delete** in the top menu.
